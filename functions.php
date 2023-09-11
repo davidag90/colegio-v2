@@ -92,3 +92,24 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+
+// Modificación de clases aplicadas a custom_logo
+add_filter( 'get_custom_logo', 'understrap_change_logo_class' );
+
+if ( ! function_exists( 'understrap_change_logo_class' ) ) {
+	/**
+	 * Replaces logo CSS class.
+	 *
+	 * @param string $html Markup.
+	 *
+	 * @return string
+	 */
+	function understrap_change_logo_class( $html ) {
+
+		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
+		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
+
+		return $html;
+	}
+}
