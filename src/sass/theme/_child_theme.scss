@@ -1,0 +1,27 @@
+// Navbar
+.custom-logo {
+    height: 44px;
+    width: auto;
+}
+
+@include media-breakpoint-up(lg) {
+    .custom-logo {
+        height: 60px;
+        width: auto;
+    }
+}
+// ---------------
+
+// Front-page
+#front-carousel {
+    margin-top: -1.5rem;
+}
+
+// Utilidades
+.width-100 {
+    position: relative;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+}
+// ---------------
