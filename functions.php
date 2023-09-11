@@ -113,3 +113,21 @@ if ( ! function_exists( 'understrap_change_logo_class' ) ) {
 		return $html;
 	}
 }
+
+add_action('widgets_init', 'custom_sidebars_init');
+
+function custom_sidebars_init() {
+	register_sidebar(
+		array(
+			'name'          => __( 'Right Sidebar Front Page', 'understrap' ),
+			'id'            => 'right-sidebar-frontpage',
+			'description'   => __( 'Right sidebar widget area on the front page', 'understrap' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+}
+
+require_once('inc/shortcodes.php');
