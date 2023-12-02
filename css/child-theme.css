@@ -36,7 +36,7 @@
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  --bs-dark: rgb(15, 32, 40);
   --bs-primary-rgb: 73, 160, 201;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -44,7 +44,7 @@
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
+  --bs-dark-rgb: 15, 32, 40;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
@@ -1911,13 +1911,13 @@ progress {
 
 .table-dark {
   --bs-table-color: #fff;
-  --bs-table-bg: #212529;
-  --bs-table-border-color: #373b3e;
-  --bs-table-striped-bg: #2c3034;
+  --bs-table-bg: rgb(15, 32, 40);
+  --bs-table-border-color: #27363e;
+  --bs-table-striped-bg: #1b2b33;
   --bs-table-striped-color: #fff;
-  --bs-table-active-bg: #373b3e;
+  --bs-table-active-bg: #27363e;
   --bs-table-active-color: #fff;
-  --bs-table-hover-bg: #323539;
+  --bs-table-hover-bg: #213138;
   --bs-table-hover-color: #fff;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -3716,19 +3716,19 @@ textarea.form-control-lg {
 
 .btn-dark {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #212529;
-  --bs-btn-border-color: #212529;
+  --bs-btn-bg: rgb(15, 32, 40);
+  --bs-btn-border-color: rgb(15, 32, 40);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #424649;
-  --bs-btn-hover-border-color: #373b3e;
-  --bs-btn-focus-shadow-rgb: 66, 70, 73;
+  --bs-btn-hover-bg: #334148;
+  --bs-btn-hover-border-color: #27363e;
+  --bs-btn-focus-shadow-rgb: 51, 65, 72;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #4d5154;
-  --bs-btn-active-border-color: #373b3e;
+  --bs-btn-active-bg: #3f4d53;
+  --bs-btn-active-border-color: #27363e;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #212529;
-  --bs-btn-disabled-border-color: #212529;
+  --bs-btn-disabled-bg: rgb(15, 32, 40);
+  --bs-btn-disabled-border-color: rgb(15, 32, 40);
 }
 
 .btn-outline-primary, .wpcf7 input[type=submit] {
@@ -3851,19 +3851,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-dark {
-  --bs-btn-color: #212529;
-  --bs-btn-border-color: #212529;
+  --bs-btn-color: rgb(15, 32, 40);
+  --bs-btn-border-color: rgb(15, 32, 40);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #212529;
-  --bs-btn-hover-border-color: #212529;
-  --bs-btn-focus-shadow-rgb: 33, 37, 41;
+  --bs-btn-hover-bg: rgb(15, 32, 40);
+  --bs-btn-hover-border-color: rgb(15, 32, 40);
+  --bs-btn-focus-shadow-rgb: 15, 32, 40;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #212529;
-  --bs-btn-active-border-color: #212529;
+  --bs-btn-active-bg: rgb(15, 32, 40);
+  --bs-btn-active-border-color: rgb(15, 32, 40);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #212529;
+  --bs-btn-disabled-color: rgb(15, 32, 40);
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #212529;
+  --bs-btn-disabled-border-color: rgb(15, 32, 40);
   --bs-gradient: none;
 }
 
@@ -5525,12 +5525,12 @@ textarea.form-control-lg {
 }
 
 .alert-dark {
-  --bs-alert-color: #141619;
-  --bs-alert-bg: #d3d3d4;
-  --bs-alert-border-color: #bcbebf;
+  --bs-alert-color: #091318;
+  --bs-alert-bg: #cfd2d4;
+  --bs-alert-border-color: #b7bcbf;
 }
 .alert-dark .alert-link {
-  color: #101214;
+  color: #070f13;
 }
 
 @keyframes progress-bar-stripes {
@@ -5924,17 +5924,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-dark {
-  color: #141619;
-  background-color: #d3d3d4;
+  color: #091318;
+  background-color: #cfd2d4;
 }
 .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-  color: #141619;
-  background-color: #bebebf;
+  color: #091318;
+  background-color: #babdbf;
 }
 .list-group-item-dark.list-group-item-action.active {
   color: #fff;
-  background-color: #141619;
-  border-color: #141619;
+  background-color: #091318;
+  border-color: #091318;
 }
 
 .btn-close {
@@ -7497,7 +7497,7 @@ textarea.form-control-lg {
 
 .text-bg-dark {
   color: #fff !important;
-  background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(15, 32, 40, var(--bs-bg-opacity, 1)) !important;
 }
 
 .link-primary {
@@ -7550,10 +7550,10 @@ textarea.form-control-lg {
 }
 
 .link-dark {
-  color: #212529 !important;
+  color: rgb(15, 32, 40) !important;
 }
 .link-dark:hover, .link-dark:focus {
-  color: #1a1e21 !important;
+  color: #0c1a20 !important;
 }
 
 .ratio {
@@ -14964,6 +14964,14 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
+.wrapper {
+  padding-bottom: 0;
+}
+
+#main-nav {
+  background-color: rgb(37, 80, 101);
+}
+
 .custom-logo {
   height: 44px;
   width: auto;
@@ -14975,8 +14983,143 @@ figure.woocommerce-product-gallery__wrapper {
     width: auto;
   }
 }
+#main-menu > .menu-item > a {
+  text-transform: uppercase;
+}
+
+#main-menu > .menu-item > a:link,
+#main-menu > .menu-item > a:visited {
+  color: white;
+}
+
+#main-menu > .menu-item > a:hover,
+#main-menu > .menu-item > a:active {
+  text-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
+}
+
 #front-carousel {
   margin-top: -1.5rem;
+}
+
+#accesos-rapidos {
+  gap: 0.75rem 1.5rem;
+}
+
+#accesos-rapidos > a {
+  aspect-ratio: 1/1;
+  box-shadow: 0px 2px 2px rgba(25, 50, 100, 0.4);
+  text-decoration: none !important;
+  transition: box-shadow 0.3s;
+  width: 120px;
+}
+
+#accesos-rapidos > a:hover {
+  box-shadow: 0 2px 8px rgba(25, 50, 100, 0.85);
+  transition: box-shadow 0.3s;
+}
+
+#front-novedades {
+  background-image: linear-gradient(rgba(0, 0, 25, 0.75), rgba(0, 0, 25, 0.6)), url(../assets/bg-front-novedades.jpg);
+  background-position: center top;
+  background-size: cover;
+}
+
+#front-novedades .card-img-top-wrap {
+  aspect-ratio: 5/4;
+  overflow: hidden;
+}
+
+#front-novedades .front-novedad {
+  background-color: transparent;
+  border: 0;
+  color: white;
+}
+
+#front-novedades .front-novedad .post-date.text-muted {
+  color: white !important;
+  opacity: 0.75;
+  margin-bottom: 0.25rem;
+}
+
+#front-novedades .splide__arrow--prev {
+  left: 0.5rem;
+}
+
+#front-novedades .splide__arrow--next {
+  right: 0.5rem;
+}
+
+@media (min-width: 576px) {
+  #front-novedades .splide__arrow--prev {
+    left: 0;
+  }
+  #front-novedades .splide__arrow--next {
+    right: 0;
+  }
+}
+#front-novedades .splide__pagination {
+  margin-bottom: -2.5rem;
+}
+
+.tramites-accesos > ul {
+  list-style-type: none;
+  padding-left: 0;
+  -moz-column-gap: 2rem;
+  column-gap: 2rem;
+  -moz-column-count: 1;
+  column-count: 1;
+}
+
+.tramites-accesos > ul > li {
+  line-height: 2.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.tramites-accesos > ul > li::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "+";
+  padding-right: 0.3rem;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 576px) {
+  .tramites-accesos > ul {
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+@media (min-width: 768px) {
+  #acceso-tramites-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (min-width: 1200px) {
+  .tramites-accesos > ul {
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+.footer-menu {
+  list-style-position: inside;
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-menu > li {
+  margin-bottom: 1rem;
+}
+
+.footer-menu > li > a:link, .footer-menu > li > a:visited {
+  color: white;
+}
+
+.footer-menu > li > a:hover, .footer-menu > li > a:active {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .width-100 {
@@ -14984,6 +15127,11 @@ figure.woocommerce-product-gallery__wrapper {
   width: 100vw;
   margin-left: -50vw;
   left: 50%;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 .has-blue-color,
@@ -15282,16 +15430,16 @@ figure.woocommerce-product-gallery__wrapper {
 
 .has-dark-color,
 .has-dark-color:visited {
-  color: #212529;
+  color: rgb(15, 32, 40);
 }
 
 .has-dark-background-color {
-  background-color: #212529;
-  border-color: #212529;
+  background-color: rgb(15, 32, 40);
+  border-color: rgb(15, 32, 40);
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-dark-color {
-  color: #212529;
+  color: rgb(15, 32, 40);
 }
 
 figure.wp-block-image,

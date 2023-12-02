@@ -437,7 +437,7 @@ progress {
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  --bs-dark: rgb(15, 32, 40);
   --bs-primary-rgb: 73, 160, 201;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -445,7 +445,7 @@ progress {
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
+  --bs-dark-rgb: 15, 32, 40;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
@@ -651,13 +651,13 @@ progress {
 
 .table-dark {
   --bs-table-color: #fff;
-  --bs-table-bg: #212529;
-  --bs-table-border-color: #373b3e;
-  --bs-table-striped-bg: #2c3034;
+  --bs-table-bg: rgb(15, 32, 40);
+  --bs-table-border-color: #27363e;
+  --bs-table-striped-bg: #1b2b33;
   --bs-table-striped-color: #fff;
-  --bs-table-active-bg: #373b3e;
+  --bs-table-active-bg: #27363e;
   --bs-table-active-color: #fff;
-  --bs-table-hover-bg: #323539;
+  --bs-table-hover-bg: #213138;
   --bs-table-hover-color: #fff;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -877,7 +877,7 @@ progress {
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  --bs-dark: rgb(15, 32, 40);
   --bs-primary-rgb: 73, 160, 201;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -885,7 +885,7 @@ progress {
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
+  --bs-dark-rgb: 15, 32, 40;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
@@ -958,7 +958,7 @@ progress {
 
 .text-bg-dark {
   color: #fff !important;
-  background-color: RGBA(33, 37, 41, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(15, 32, 40, var(--bs-bg-opacity, 1)) !important;
 }
 
 .link-primary {
@@ -1011,10 +1011,10 @@ progress {
 }
 
 .link-dark {
-  color: #212529 !important;
+  color: rgb(15, 32, 40) !important;
 }
 .link-dark:hover, .link-dark:focus {
-  color: #1a1e21 !important;
+  color: #0c1a20 !important;
 }
 
 .ratio {
@@ -5387,16 +5387,16 @@ progress {
 
 .has-dark-color,
 .has-dark-color:visited {
-  color: #212529;
+  color: rgb(15, 32, 40);
 }
 
 .has-dark-background-color {
-  background-color: #212529;
-  border-color: #212529;
+  background-color: rgb(15, 32, 40);
+  border-color: rgb(15, 32, 40);
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-dark-color {
-  color: #212529;
+  color: rgb(15, 32, 40);
 }
 
 figure.wp-block-image,

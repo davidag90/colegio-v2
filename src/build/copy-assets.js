@@ -21,3 +21,5 @@ copyDir('./node_modules/bootstrap/scss', './src/sass/assets/bootstrap5');
 copyDir('./node_modules/font-awesome/scss', './src/sass/assets/fontawesome');
 // Copy all Understrap SCSS files.
 copyDir('./node_modules/understrap/src/sass/theme', './src/sass/assets/understrap/theme');
+// Copy all Splide Files
+copyDir('./node_modules/@splidejs/splide/dist', './src/js/assets/splide');

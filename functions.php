@@ -41,6 +41,7 @@ function theme_enqueue_styles() {
 	$css_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_styles );
 
 	wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . $theme_styles, array(), $css_version );
+	
 	wp_enqueue_script( 'jquery' );
 	
 	$js_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . $theme_scripts );
@@ -49,6 +50,9 @@ function theme_enqueue_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'splide-js', get_stylesheet_directory_uri( ) . '/src/js/assets/splide/js/splide.min.js', array() , '', true );
+	wp_enqueue_style( 'splide-css', get_stylesheet_directory_uri( ) . '/src/js/assets/splide/css/splide.min.css', array() );
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
@@ -94,40 +98,5 @@ function understrap_child_customize_controls_js() {
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
 
-// Modificación de clases aplicadas a custom_logo
-add_filter( 'get_custom_logo', 'understrap_change_logo_class' );
-
-if ( ! function_exists( 'understrap_change_logo_class' ) ) {
-	/**
-	 * Replaces logo CSS class.
-	 *
-	 * @param string $html Markup.
-	 *
-	 * @return string
-	 */
-	function understrap_change_logo_class( $html ) {
-
-		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
-		$html = str_replace( 'alt=""', 'title="Home" alt="logo"', $html );
-
-		return $html;
-	}
-}
-
-add_action('widgets_init', 'custom_sidebars_init');
-
-function custom_sidebars_init() {
-	register_sidebar(
-		array(
-			'name'          => __( 'Right Sidebar Front Page', 'understrap' ),
-			'id'            => 'right-sidebar-frontpage',
-			'description'   => __( 'Right sidebar widget area on the front page', 'understrap' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		)
-	);
-}
-
 require_once('inc/shortcodes.php');
+require_once('inc/custom-functions.php');
