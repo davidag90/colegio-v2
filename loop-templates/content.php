@@ -1,0 +1,27 @@
+<?php
+/**
+ * Post rendering content according to caller of get_template_part
+ *
+ * @package Understrap
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+?>
+<div class="col">
+	<div <?php post_class('card h-100'); ?> id="post-<?php the_ID(); ?>">
+		<div class="card-img-top-wrap">
+			<?php echo get_the_post_thumbnail( $post->ID, 'large', array('class' => 'card-img-top h-100 w-auto', 'style' => 'max-width: none;') ); ?>
+		</div>
+		
+		<div class="card-body d-flex flex-column align-items-start">
+			<?php the_title( sprintf( '<h2 class="card-title h4"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>'); ?>
+
+			<p class="card-text"><?php echo get_the_excerpt(); ?>...</p>
+
+			<div class="read-more mt-auto pt-3 text-end w-100">
+            	<a class="btn btn-primary understrap-read-more-link link-light" href="<?php echo get_the_permalink(); ?>"><?php echo __( 'Read More...', 'understrap') ?><span class="screen-reader-text"> from <?php echo get_the_title(); ?></span></a>
+			</div><!-- .read-more -->
+		</div><!-- .card-body -->
+	</div><!-- #post-<?php the_ID(); ?> -->
+</div><!-- .col -->

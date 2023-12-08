@@ -13,31 +13,24 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-
-			<?php understrap_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
+		<div class="entry-meta"><?php echo get_the_date(); ?></div><!-- .entry-meta -->
+		
+		<?php the_title( '<h1 class="entry-title mb-3 pb-3 border-1 border-bottom">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php echo get_the_post_thumbnail( $post->ID, 'medium', array(
+		'class'	=> 'float-start me-4 mb-4'
+	) ); ?>
 
 	<div class="entry-content">
 
 		<?php
 		the_content();
+		
 		understrap_link_pages();
 		?>
 
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
-
+	
 </article><!-- #post-<?php the_ID(); ?> -->
