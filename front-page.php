@@ -63,36 +63,36 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col">
 				<h2 class="d-none">Accesos Rápidos</h2>
 				<nav id="accesos-rapidos" class="d-flex flex-row justify-content-center flex-wrap width-100 p-4 bg-light bg-gradient border-top border-bottom border-dark-subtle border-5">
-					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="#">
+					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-danger bg-gradient link-light" href="https://www.indexweb.com.ar/colegio/loginservicios.aspx">
 						<span class="d-block mb-2"><i class="fa-solid fa-circle-user fa-3x fa-fw"></i></span>
 						<span class="d-block fs-6">Mi cuenta</span>
 					</a>
-					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="#">
+					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="https://www.indexweb.com.ar/capac/grilla.aspx">
 						<span class="d-block mb-2"><i class="fa-solid fa-graduation-cap fa-3x fa-fw"></i></span>
 						<span class="d-block fs-6">Formación</span>
 					</a>
 					
 					<div class="d-block d-md-none break">&nbsp;</div>
 
-					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="#">
+					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="<?php echo site_url(); ?>/colegio/comisiones-trabajo/">
 						<span class="d-block mb-2"><i class="fa-solid fa-briefcase fa-3x fa-fw"></i></span>
 						<span class="d-block fs-6">Comisiones</span>
 					</a>
 
 					<div class="d-none d-md-block d-lg-none break">&nbsp;</div>
 					
-					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="#">
+					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="<?php echo site_url(); ?>/informacion-general/convenios-beneficios/">
 						<span class="d-block mb-2"><i class="fa-solid fa-handshake fa-3x fa-fw"></i></span>
-						<span class="d-block fs-6">Convenios</span>
+						<span class="d-block fs-6">Beneficios</span>
 					</a>
 					
 					<div class="d-block d-md-none break">&nbsp;</div>
 					
-					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="#">
+					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="<?php echo site_url(); ?>/colegio/comisiones-trabajo/comision-fondo-ayuda-solidario/">
 						<span class="d-block mb-2"><i class="fa-solid fa-life-saver fa-3x fa-fw"></i></span>
 						<span class="d-block fs-6">Subsidios</span>
 					</a>
-					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="#">
+					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="https://www.indexweb.com.ar/colegio/matriculados.aspx?Estado=1">
 						<span class="d-block mb-2"><i class="fa-solid fa-file-text fa-3x fa-fw"></i></span>
 						<span class="d-block fs-6">Matriculados</span>
 					</a>
@@ -105,9 +105,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<main class="site-main" id="main" role="main">
 
 					<?php
-					while ( have_posts() ) :
-						the_post();
-					endwhile;
+					while ( have_posts() ) : the_post();
+						
+							endwhile;
 
 					the_content();
 					?>
