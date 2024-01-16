@@ -1,4 +1,23 @@
-<?php 
+<?php
+// Desactiva carga por defecto de librerías CF7
+add_filter( 'wpcf7_load_js', '__return_false' );
+add_filter( 'wpcf7_load_css', '__return_false' );
+
+// Carga librerías CF7 solo en página Contacto
+function custom_cf7_lib_loading() {
+	if (is_page('contacto')) {
+		if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+			wpcf7_enqueue_scripts();
+		}
+			
+		if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+			wpcf7_enqueue_styles();
+		}
+	}
+}
+
+add_action( 'wp_enqueue_scripts', 'custom_cf7_lib_loading' );
+
 // Desactiva widget blocks
 function disable_widget_blocks() {
     remove_theme_support( 'widgets-block-editor' );
@@ -40,6 +59,54 @@ function custom_sidebars_init() {
 			'after_title'   => '</h3>'
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Sidebar Aranceles', 'understrap' ),
+			'id'            => 'sidebar-aranceles',
+			'description'   => 'Barra lateral seccion aranceles',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>'
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Sidebar Contacto', 'understrap' ),
+			'id'            => 'sidebar-contacto',
+			'description'   => 'Barra lateral seccion contacto',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>'
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Sidebar Comisiones', 'understrap' ),
+			'id'            => 'sidebar-comisiones',
+			'description'   => 'Barra lateral para páginas de Comisiones de Trabajo',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>'
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Sidebar Trámites', 'understrap' ),
+			'id'            => 'sidebar-tramites',
+			'description'   => 'Barra lateral para páginas de Trámites',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>'
+		)
+	);
 }
 
 function custom_excerpt_length( $length ) {
@@ -49,7 +116,7 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function understrap_all_excerpts_get_more_link( $post_excerpt ) {
-    if ( is_admin() || ! get_the_ID() || is_front_page() || is_archive() ) {
+    if ( is_admin() || ! get_the_ID() || is_front_page() || is_archive() || is_page('convenios-beneficios') ) {
         return $post_excerpt;
     }
     
@@ -128,3 +195,11 @@ add_filter( 'get_the_archive_title_prefix', 'delete_archive_prefix' );
 function delete_archive_prefix() {
 	return false;
 }
+
+function convenios_enqueue_scripts() {
+	if (is_page( 'convenios-beneficios' )):
+		wp_enqueue_script( 'convenios-js', get_stylesheet_directory_uri( ) . '/js/convenios.js', array() , '', true );
+	endif;
+}
+
+add_action( 'wp_enqueue_scripts', 'convenios_enqueue_scripts' );

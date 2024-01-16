@@ -44,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 			
 			<div class="col-12 col-lg-4">
-				<?php dynamic_sidebar( 'right-sidebar' ); ?>
+				<?php dynamic_sidebar( 'sidebar-contacto' ); ?>
 			</div>
 		</div><!-- .row -->
 	</div><!-- #content -->

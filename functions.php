@@ -53,10 +53,12 @@ function theme_enqueue_styles() {
 
 	wp_enqueue_script( 'splide-js', get_stylesheet_directory_uri( ) . '/src/js/assets/splide/js/splide.min.js', array() , '', true );
 	wp_enqueue_style( 'splide-css', get_stylesheet_directory_uri( ) . '/src/js/assets/splide/css/splide.min.css', array() );
+
+	if( is_page('delegados-departamentales') ) {
+		wp_enqueue_script( 'departamentos', get_stylesheet_directory_uri() . '/js/departamentos.js', array(), null, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
-
-
 
 /**
  * Load the child theme's text domain
@@ -65,7 +67,6 @@ function add_child_theme_textdomain() {
 	load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
-
 
 
 /**
@@ -82,7 +83,6 @@ function understrap_default_bootstrap_version() {
 add_filter( 'theme_mod_understrap_bootstrap_version', 'understrap_default_bootstrap_version', 20 );
 
 
-
 /**
  * Loads javascript for showing customizer warning dialog.
  */
@@ -96,7 +96,6 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
-
 
 require_once('inc/shortcodes.php');
 require_once('inc/custom-functions.php');

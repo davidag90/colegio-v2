@@ -28,11 +28,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 				$query = new WP_Query($args);
 				
 				$c = 0;
-				$last_post = $query->post_count - 1;
 
 				if ($query->have_posts()):
 					while ( $query->have_posts() ) : $query->the_post(); ?>
-						<div class="carousel-item <?php if($c == $last_post): ?> active <?php endif; ?>">
+						<div class="carousel-item <?php if($c == 0): ?>active<?php endif; ?>">
 							<?php $link = get_field('content_link'); ?>
 							
 							<?php if($link): ?>
@@ -80,7 +79,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<span class="d-block fs-6">Comisiones</span>
 					</a>
 
-					<div class="d-none d-md-block d-xl-none break">&nbsp;</div>
+					<div class="d-none d-md-block d-lg-none break">&nbsp;</div>
 					
 					<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light" href="#">
 						<span class="d-block mb-2"><i class="fa-solid fa-handshake fa-3x fa-fw"></i></span>
@@ -106,9 +105,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<main class="site-main" id="main" role="main">
 
 					<?php
-					while ( have_posts() ) : the_post();
-						
-							endwhile;
+					while ( have_posts() ) :
+						the_post();
+					endwhile;
 
 					the_content();
 					?>

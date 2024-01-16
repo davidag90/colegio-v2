@@ -64,3 +64,389 @@ if (! function_exists('mostrar_front_novedades')) {
 }
 
 add_shortcode('front-novedades', 'mostrar_front_novedades');
+
+
+
+if (! function_exists('mostrar_aranceles_vigentes')) {
+    function mostrar_aranceles_vigentes() {
+        ob_start();
+
+        $args = array(
+            'post_type' => 'arancel',
+            'nopaging' => true
+        );
+        
+        $query = new WP_Query($args);
+        $c = 0;
+        
+        if ($query->have_posts()):
+            echo '<div id="resumen-aranceles">';
+                while($query->have_posts()):
+                    $query->the_post();
+                    $mes_arancel = get_field('mes');
+                    $ano_arancel = get_field('ano');
+                    $link = get_field('link_doc');
+                    $titulo = get_the_title();
+                    
+                    if($c == 0):
+                        $bg = 'bg-success';
+                    else:
+                        $bg = 'bg-primary';
+                    endif;
+
+                    echo '<div class="arancel ' . $bg . ' text-light text-center p-3 rounded position-relative d-flex flex-column align-items-center justify-content-start">';
+                        echo '<div class="icono mb-2"><i class="fa-solid fa-file-lines fa-3x"></i></div>';
+                        echo '<a href="' . $link . '" class="link-light stretched-link text-decoration-none" target="_blank">' . $titulo . '</a>';
+                    echo '</div>'; // .arancel
+
+                    $c++;
+                endwhile;
+            echo '</div>'; // .d-flex#resumen-aranceles
+            
+            wp_reset_postdata(); // Restablece los datos del post original
+        else:
+            echo '<p>No se encontró contenido de esta sección.</p>';
+        endif;
+        
+        $output = ob_get_clean();
+        
+        return $output;
+    }
+}
+
+add_shortcode('aranceles-vigentes', 'mostrar_aranceles_vigentes');
+
+
+
+if (! function_exists('mostrar_valor_min_cons')) {
+    function mostrar_valor_min_cons() {
+        ob_start();
+
+        $args = array(
+            'post_type' => 'valor-min-cons',
+            'nopaging' => true
+        );
+        
+        $query = new WP_Query($args);
+        $c = 0;
+        
+        if ($query->have_posts()):
+            echo '<div class="list-group list-group-flush">';
+                while($query->have_posts()):
+                    $query->the_post();
+
+                    $link = get_field('link_doc'); 
+                    $titulo = get_the_title();
+
+                    echo '<a href="' . $link . '" class="list-group-item bg-transparent" target="_blank"><i class="fa-solid fa-file-lines me-2"></i>' . $titulo . '</a>';
+                endwhile;
+            echo '</div>'; // .list-group
+            
+            wp_reset_postdata(); // Restablece los datos del post original
+        else:
+            echo '<p>No se encontró contenido de esta sección.</p>';
+        endif;
+        
+        $output = ob_get_clean();
+        
+        return $output;
+    }
+}
+
+add_shortcode('valor-min-cons', 'mostrar_valor_min_cons');
+
+
+if (! function_exists('mostrar_resoluciones')) {
+    function mostrar_resoluciones() {
+        ob_start();
+
+        $args = array(
+            'post_type' => 'resolucion',
+            'nopaging' => true
+        );
+        
+        $query = new WP_Query($args);
+        
+        if ($query->have_posts()):
+            echo '<table class="table table-striped">';
+                echo '<thead class="table-primary">';
+                    echo '<tr>';
+                        echo '<th>Resolución</th>';
+                        echo '<th>Fecha</th>';
+                    echo '</tr>';
+                echo '</thead>';
+
+                echo '<tbody>';
+                while($query->have_posts()):
+                    $query->the_post();
+
+                    $titulo = get_the_title();
+                    $fecha = get_the_date();
+                    $link_doc = get_field('doc_pdf');
+
+                    echo '<tr>';
+                        echo '<td><a href="' . $link_doc . '" class="link-dark" target="_blank">' . $titulo . '</a></td>';
+                        echo '<td>' . $fecha . '</td>';
+                    echo '</tr>';
+                endwhile;
+                echo '</tbody>';
+            echo '</table>'; //
+            
+            wp_reset_postdata(); // Restablece los datos del post original
+        else:
+            echo '<p>No se encontró contenido de esta sección.</p>';
+        endif;
+        
+        $output = ob_get_clean();
+        
+        return $output;
+    }
+}
+
+add_shortcode('lista-resoluciones', 'mostrar_resoluciones');
+
+
+
+if (! function_exists('mostrar_comisiones_trabajo')) {
+    function mostrar_comisiones_trabajo() {
+        ob_start();
+
+        $parent_id = get_the_ID();
+        $child_pages = get_pages(array( 'child_of' => $parent_id ));
+        
+        if (!empty($child_pages)):
+            echo '<div id="comisiones-trabajo">';
+
+            foreach ($child_pages as $child) {
+                $icono_fa = get_field('icono_fa', $child->ID);
+
+                if( empty($icono_fa) ) {
+                    $icono_fa = "fa-solid fa-file-lines";
+                }
+
+                echo '<div class="comision bg-primary text-light text-center p-3 rounded position-relative d-flex flex-row align-items-center justify-content-start">';
+                    echo '<div class="icono me-3"><i class="' . $icono_fa . ' fa-3x fa-fw"></i></div>';
+                    echo '<a href="' . get_page_link($child->ID) . '" class="link-light stretched-link text-decoration-none text-start" target="_blank">' . $child->post_title . '</a>';
+                echo '</div>'; // .comision
+            }
+
+            echo '</div>';
+        else:
+            echo '<p>No se encontraron elementos en esta sección.</p>';
+        endif;
+        
+        $output = ob_get_clean();
+        
+        return $output;
+    }
+}
+
+add_shortcode('mostrar-comisiones-trabajo', 'mostrar_comisiones_trabajo');
+
+
+
+if (! function_exists('mostrar_tramites_online')) {
+    function mostrar_tramites_online() {
+        ob_start();
+
+        $parent_id = get_the_ID();
+        $child_pages = get_pages(array( 'child_of' => $parent_id ));
+        
+        if (!empty($child_pages)):
+            echo '<div id="tramites-online">';
+
+            foreach ($child_pages as $child) {
+                $icono_fa = get_field('icono_fa', $child->ID);
+
+                if( empty($icono_fa) ) {
+                    $icono_fa = "fa-solid fa-file-lines";
+                }
+
+                echo '<div class="tramite bg-primary text-light text-center p-3 rounded position-relative d-flex flex-row align-items-center justify-content-start">';
+                    echo '<div class="icono me-3"><i class="' . $icono_fa . ' fa-3x fa-fw"></i></div>';
+                    echo '<a href="' . get_page_link($child->ID) . '" class="link-light stretched-link text-decoration-none text-start" target="_blank">' . $child->post_title . '</a>';
+                echo '</div>'; // .tramite
+            }
+
+            echo '</div>'; // #tramites-online
+        else:
+            echo '<p>No se encontraron elementos en esta sección.</p>';
+        endif;
+        
+        $output = ob_get_clean();
+        
+        return $output;
+    }
+}
+
+add_shortcode('mostrar-tramites-online', 'mostrar_tramites_online');
+
+
+
+if (! function_exists('mostrar_delegados')) {
+    function mostrar_delegados() {
+        ob_start();
+
+        $args = array(
+            'post_type' => 'delegado',
+            'nopaging' => true,
+            'order' => 'ASC',
+            'orderby' => 'title'
+        );
+        
+        $query = new WP_Query($args);
+        
+        if ($query->have_posts()):
+            $c = 0;
+            echo '<p>Seleccioná un departamento para ver sus Delegados Departamentales</p>';
+            echo '<div class="mb-5" id="delegados-departamentales">';
+                echo '<form>';
+                    echo '<div class="mb-3" id="select-departamento-wrap">';                
+                        echo '<select class="form-select" aria-label="Selecciona un departamento" id="lista-departamentos">';
+                            while($query->have_posts()):
+                                $query->the_post();
+                                $departamento = get_post_field( 'post_name' );
+                                $titulo = get_the_title();
+
+                                if($c == 0):
+                                    echo '<option value="' . $departamento . '" selected>' . $titulo . '</option>';
+                                else:
+                                    echo '<option value="' . $departamento . '">' . $titulo . '</option>';
+                                endif;
+
+                                $c++;
+                            endwhile;
+                        echo '</select>';
+                    echo '</div>'; // #select-departamento-wrap
+                echo '</form>';
+
+                $c = 0;
+                $query->rewind_posts();
+
+                echo '<div id="content-departamentos">';
+                while($query->have_posts()):
+                    $query->the_post();
+                    $departamento = get_post_field( 'post_name' );
+
+                    if($c == 0):
+                        echo '<div class="d-block content-departamento bg-primary bg-opacity-25 border border-primary rounded p-4" id="' . $departamento . '">' . get_the_content() . '</div>';
+                    else:
+                        echo '<div class="d-none content-departamento bg-primary bg-opacity-25 border border-primary rounded p-4" id="' . $departamento . '">' . get_the_content() . '</div>';
+                    endif;
+
+                    $c++;
+                endwhile;
+                echo '</div>'; // #content-departamentos
+            echo '</div>'; // #delegados-departamentales
+
+            wp_reset_postdata(); // Restablece los datos del post original
+        else:
+            echo '<p>No se encontró contenido de esta sección.</p>';
+        endif;
+        
+        $output = ob_get_clean();
+        
+        return $output;
+    }
+}
+
+add_shortcode('mostrar-delegados', 'mostrar_delegados');
+
+
+if (! function_exists('mostrar_revistas')) {
+    function mostrar_revistas() {
+        ob_start();
+
+        $args = array(
+            'post_type' => 'revista',
+            'nopaging' => true
+        );
+        
+        $query = new WP_Query($args);
+        $c = 0;
+        
+        if ($query->have_posts()):
+            echo '<div id="resumen-revistas">';
+                while($query->have_posts()):
+                    $query->the_post();
+                    $edicion = get_field('edicion_nro');
+                    $ano = get_field('ano');
+                    $link = get_field('link_doc');
+                    $titulo = get_the_title();
+                    
+                    if($c == 0):
+                        $bg = 'bg-success';
+                    else:
+                        $bg = 'bg-primary';
+                    endif;
+
+                    echo '<div class="revista ' . $bg . ' text-light text-center p-3 rounded position-relative d-flex flex-column align-items-center justify-content-start">';
+                        echo '<div class="icono mb-2"><i class="fa-solid fa-file-lines fa-3x"></i></div>';
+                        echo '<a href="' . $link . '" class="link-light stretched-link text-decoration-none" target="_blank">Edición N° ' . $edicion . '<br>Año ' . $ano . '</a>';
+                    echo '</div>'; // .revista
+
+                    $c++;
+                endwhile;
+            echo '</div>'; // #resumen-revistas
+            
+            wp_reset_postdata(); // Restablece los datos del post original
+        else:
+            echo '<p>No se encontró contenido de esta sección.</p>';
+        endif;
+        
+        $output = ob_get_clean();
+        
+        return $output;
+    }
+}
+
+add_shortcode('mostrar-revistas','mostrar_revistas');
+
+
+if (! function_exists('mostrar_boletines')) {
+    function mostrar_boletines() {
+        ob_start();
+
+        $args = array(
+            'post_type' => 'boletin',
+            'nopaging' => true
+        );
+        
+        $query = new WP_Query($args);
+        $c = 0;
+        
+        if ($query->have_posts()):
+            echo '<div id="resumen-boletines">';
+                while($query->have_posts()):
+                    $query->the_post();
+                    $edicion = get_field('edicion_nro');
+                    $ano = get_field('ano');
+                    $link = get_field('url_boletin');
+                    
+                    if($c == 0):
+                        $bg = 'bg-success';
+                    else:
+                        $bg = 'bg-primary';
+                    endif;
+
+                    echo '<div class="boletin ' . $bg . ' text-light text-center p-3 rounded position-relative d-flex flex-column align-items-center justify-content-start">';
+                        echo '<div class="icono mb-2"><i class="fa-solid fa-file-lines fa-3x"></i></div>';
+                        echo '<a href="' . $link . '" class="link-light stretched-link text-decoration-none" target="_blank">Edición N° ' . $edicion . '<br>Año ' . $ano . '</a>';
+                    echo '</div>'; // .boletin
+
+                    $c++;
+                endwhile;
+            echo '</div>'; // #resumen-boletines
+            
+            wp_reset_postdata(); // Restablece los datos del post original
+        else:
+            echo '<p>No se encontró contenido de esta sección.</p>';
+        endif;
+        
+        $output = ob_get_clean();
+        
+        return $output;
+    }
+}
+
+add_shortcode('mostrar-boletines','mostrar_boletines');
