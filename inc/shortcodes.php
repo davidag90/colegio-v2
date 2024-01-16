@@ -250,7 +250,10 @@ if (! function_exists('mostrar_tramites_online')) {
         ob_start();
 
         $parent_id = get_the_ID();
-        $child_pages = get_pages(array( 'child_of' => $parent_id ));
+        $child_pages = get_pages(array(
+            'child_of'      => $parent_id,
+            'sort_column'   => 'menu_order'
+        ));
         
         if (!empty($child_pages)):
             echo '<div id="tramites-online">';
