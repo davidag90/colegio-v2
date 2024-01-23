@@ -57,6 +57,15 @@ function theme_enqueue_styles() {
 	if( is_page('delegados-departamentales') ) {
 		wp_enqueue_script( 'departamentos', get_stylesheet_directory_uri() . '/js/departamentos.js', array(), null, true );
 	}
+
+	if( is_page('bolsa-trabajo') ) {
+		wp_enqueue_script( 'bolsa-trabajo', get_stylesheet_directory_uri() . '/src/js/bolsa-trabajo.js', array(), null, true );
+	}
+
+	if( is_page('urgencias-odontologicas') ) {
+		wp_enqueue_script( 'luxon', get_stylesheet_directory_uri() . '/src/js/assets/luxon/luxon.min.js', array(), null, true );
+		wp_enqueue_script( 'urgencias', get_stylesheet_directory_uri() . '/src/js/urgencias.js', array('luxon'), null, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
