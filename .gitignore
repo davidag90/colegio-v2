@@ -50,3 +50,7 @@ phpcs.xml
 dist/
 dist-product/
 **/img
+
+# Custom
+src/js/urgencias-old.js
+src/js/bolsa-trabajo-noglobals.js
