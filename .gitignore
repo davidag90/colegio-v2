@@ -54,3 +54,4 @@ dist-product/
 # Custom
 src/js/urgencias-old.js
 src/js/bolsa-trabajo-noglobals.js
+assets/svg/
