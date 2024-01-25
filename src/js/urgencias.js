@@ -25,6 +25,45 @@ async function filterData() {
             Dia: objDia
         }
     });
+    
+    /* ---- SEGMENTO PREPARADO PARA FUTURA FUNCIONALIDAD ----- */
+    /* ---- Potencial agregado de filtro por ciudad      ----- */
+    /* ---- Reorganiza el JSON con un objeto por Ciudad  ----- */
+    /* ---- y los profesionales de cada ciudad dentro de el --
+
+    const arrCiudades = formattedData.reduce( (acc, objeto) => {
+        var ciudadExistente = acc.find((ciudad) => {
+            return ciudad.nombre === objeto.Ciudad;
+        });
+
+        if (ciudadExistente) {
+            ciudadExistente.profesionales.push({
+                Dia: objeto.Dia,
+                MP: objeto.MP,
+                Nombre: objeto.Nombre,
+                Celular: objeto.Celular,
+                Descripcion: objeto.Descripcion,
+                Seccional: objeto.Seccional,
+                IdSeccional: objeto.IdSeccional
+            });
+        } else {
+            acc.push({
+                nombre: objeto.Ciudad,
+                profesionales: [{
+                    Dia: objeto.Dia,
+                    MP: objeto.MP,
+                    Nombre: objeto.Nombre,
+                    Celular: objeto.Celular,
+                    Descripcion: objeto.Descripcion,
+                    Seccional: objeto.Seccional,
+                    IdSeccional: objeto.IdSeccional
+                }],
+            });
+        }
+
+        return acc;
+    }, []);
+    ----------------------------------------------------------- */
 
     const hoy = DateTime.now().toFormat('dd/LL/yyyy');
 
