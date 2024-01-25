@@ -349,9 +349,8 @@
     background-color: rgba(200,225,250,0.25);
 }
 
-// Aranceles y Revistas
+// Aranceles y Boletines
 #resumen-aranceles,
-#resumen-revistas,
 #resumen-boletines {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -360,7 +359,6 @@
 
 @include media-breakpoint-up(md) {
     #resumen-aranceles,
-    #resumen-revistas,
     #resumen-boletines {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -368,7 +366,6 @@
 
 @include media-breakpoint-up(lg) {
     #resumen-aranceles,
-    #resumen-revistas,
     #resumen-boletines {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -376,14 +373,12 @@
 
 @include media-breakpoint-up(xl) {
     #resumen-aranceles,
-    #resumen-revistas,
     #resumen-boletines {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
 
 #resumen-aranceles > .arancel,
-#resumen-revistas > .revista,
 #resumen-boletines > .boletin {
     opacity: 0.8;
     box-shadow: 0;
@@ -393,7 +388,6 @@
 }
 
 #resumen-aranceles > .arancel:hover,
-#resumen-revistas > .revista:hover,
 #resumen-boletines > .boletin:hover {
     opacity: 1;
     box-shadow: 1px 1px 3px rgba(25,50,100,.5);
@@ -429,5 +423,47 @@
     #comisiones-trabajo,
     #tramites-online {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+// Delegados Departamentales
+.content-departamento {
+    transition: all 0.25s ease;
+}
+.svg-map-wrapper > svg {
+    max-width: 420px;
+    height: auto;
+}
+
+.svg-map-wrapper > svg path:hover {
+    cursor: pointer;
+}
+
+.svg-map-wrapper > svg path.not-selected {
+    fill: rgba(73,160,201,0.2);
+    stroke: rgba(15, 32, 40, 0.25);
+    stroke-width: 0.5;
+    transition: all 1s ease;
+}
+
+path.selected {
+    fill: rgb(73,160,201);
+    transition: all 0.25s ease;
+}
+
+path.forbidden {
+    cursor: not-allowed !important;
+}
+
+// Revista El Espejo
+#resumen-revistas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@include media-breakpoint-up(md) {
+    #resumen-revistas {
+        grid-template-columns: 1fr 1fr;
     }
 }

@@ -372,20 +372,27 @@ if (! function_exists('mostrar_revistas')) {
             echo '<div id="resumen-revistas">';
                 while($query->have_posts()):
                     $query->the_post();
+                    
                     $edicion = get_field('edicion_nro');
                     $ano = get_field('ano');
                     $link = get_field('link_doc');
                     $titulo = get_the_title();
+                    $thumb = get_the_post_thumbnail();
                     
-                    if($c == 0):
-                        $bg = 'bg-success';
-                    else:
-                        $bg = 'bg-primary';
-                    endif;
+                    $date = get_the_date('Y-m-d H:i:s');
+                    $date_obj = new DateTime($date);
 
-                    echo '<div class="revista ' . $bg . ' text-light text-center p-3 rounded position-relative d-flex flex-column align-items-center justify-content-start">';
-                        echo '<div class="icono mb-2"><i class="fa-solid fa-file-lines fa-3x"></i></div>';
-                        echo '<a href="' . $link . '" class="link-light stretched-link text-decoration-none" target="_blank">Edición N° ' . $edicion . '<br>Año ' . $ano . '</a>';
+                    $date_month = $date_obj->format('F');
+                    $date_year = $date_obj->format('Y');
+                    
+                    // Ternarios para chequear el primer ejemplar y destacarlo
+                    echo '<div class="revista ' . ($c == 0 ? 'bg-primary text-light' : '') . ' text-center p-3 position-relative d-flex flex-row align-items-start justify-content-start">';
+                        echo '<div class="thumb-revista">' . $thumb . '</div>';
+                        echo '<div class="desc-revista">';
+                            echo '<h3 class="titulo-revista">Edición N° ' . $edicion . '</h3>';
+                            echo '<p class="meta-revista text-muted">' . $date_month . ' ' . $date_year .'</p>';
+                            echo '<a class="btn ' . ($c == 0 ? 'btn-light' : 'btn-primary link-light') . '" href="' . $link . '" target="_blank">Ver ejemplar</a>';
+                        echo '</div>'; // .desc-revista
                     echo '</div>'; // .revista
 
                     $c++;
