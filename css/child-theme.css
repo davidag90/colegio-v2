@@ -15462,6 +15462,9 @@ path.forbidden {
     justify-content: center;
     margin: 0;
   }
+  .favs-marco-laboral .btn, .favs-marco-laboral .wpcf7 input[type=submit], .wpcf7 .favs-marco-laboral input[type=submit], .favs-marco-laboral .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .favs-marco-laboral a.button, .favs-marco-laboral .woocommerce-info a.button, .woocommerce-info .favs-marco-laboral a.button {
+    margin: 0;
+  }
 }
 .has-blue-color,
 .has-blue-color:visited {
