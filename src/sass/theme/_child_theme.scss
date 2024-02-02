@@ -500,3 +500,21 @@ path.forbidden {
     object-fit: cover;
     aspect-ratio: 16/9;
 }
+
+.favs-marco-laboral {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.favs-marco-laboral .btn {
+    margin: 0 auto;
+}
+
+@include media-breakpoint-up(md) {
+    .favs-marco-laboral {
+        flex-direction: row;
+        justify-content: center;
+        margin: 0
+    }
+}

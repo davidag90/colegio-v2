@@ -15446,6 +15446,23 @@ path.forbidden {
   aspect-ratio: 16/9;
 }
 
+.favs-marco-laboral {
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.favs-marco-laboral .btn, .favs-marco-laboral .wpcf7 input[type=submit], .wpcf7 .favs-marco-laboral input[type=submit], .favs-marco-laboral .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .favs-marco-laboral a.button, .favs-marco-laboral .woocommerce-info a.button, .woocommerce-info .favs-marco-laboral a.button {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .favs-marco-laboral {
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+  }
+}
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
