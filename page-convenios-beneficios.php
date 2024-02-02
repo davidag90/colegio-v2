@@ -86,7 +86,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                                         <h5 class="card-title"><?php the_title(); ?></h5>
                                         <p class="card-text"><?php echo get_the_excerpt(); ?></p>
                                         <div class="mt-auto text-end">
-                                            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#convenio-<?php echo get_the_ID(); ?>">Más información</button>
+                                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#convenio-<?php echo get_the_ID(); ?>">Más información</button>
                                         </div>
                                     </div>
                                 </div>
@@ -101,5 +101,37 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div><!-- #content -->
 </div><!-- .wrapper -->
 
-<?php
+<?php 
+$args = array(
+    'post_type' 	=> 'convenios',
+    'post_status' 	=> 'publish',
+    'orderby'		=> 'menu_order',
+    'order'			=> 'ASC',
+    'nopaging'		=> true
+);
+
+$posts = new WP_Query( $args );
+
+if( $posts->have_posts() ):
+    while( $posts->have_posts() ): 
+        $posts->the_post(); ?>
+        
+        <div class="modal" tabindex="-1" id="convenio-<?php echo get_the_ID(); ?>">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><?php the_title(); ?></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endwhile;
+endif;
+
+wp_reset_postdata();
+
 get_footer();
