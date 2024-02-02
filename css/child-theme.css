@@ -15024,6 +15024,12 @@ figure.woocommerce-product-gallery__wrapper {
   padding-top: 1.5rem;
 }
 
+.footer-logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
 .custom-header p {
   margin: 0;
   padding: 0;
@@ -15303,7 +15309,6 @@ figure.woocommerce-product-gallery__wrapper {
   background-color: rgba(200, 225, 250, 0.25);
 }
 
-#resumen-aranceles,
 #resumen-boletines {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -15311,24 +15316,20 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 @media (min-width: 768px) {
-  #resumen-aranceles,
   #resumen-boletines {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (min-width: 992px) {
-  #resumen-aranceles,
   #resumen-boletines {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 @media (min-width: 1200px) {
-  #resumen-aranceles,
   #resumen-boletines {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
-#resumen-aranceles > .arancel,
 #resumen-boletines > .boletin {
   opacity: 0.8;
   box-shadow: 0;
@@ -15337,7 +15338,6 @@ figure.woocommerce-product-gallery__wrapper {
   height: 100%;
 }
 
-#resumen-aranceles > .arancel:hover,
 #resumen-boletines > .boletin:hover {
   opacity: 1;
   box-shadow: 1px 1px 3px rgba(25, 50, 100, 0.5);
@@ -15401,17 +15401,51 @@ path.forbidden {
   cursor: not-allowed !important;
 }
 
-#resumen-revistas {
+#resumen-revistas,
+#resumen-aranceles {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  #resumen-revistas {
+  #resumen-revistas,
+  #resumen-aranceles {
     grid-template-columns: 1fr 1fr;
   }
 }
+#resumen-revistas > .revista,
+#resumen-aranceles > .arancel {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+#resumen-revistas > .revista > .thumb-revista,
+#resumen-aranceles > .arancel > .thumb-arancel {
+  background-color: lightgray;
+  min-width: 100px;
+  max-width: 120px;
+  width: 100%;
+}
+
+#resumen-revistas > .revista > .thumb-revista > img,
+#resumen-aranceles > .arancel > .thumb-arancel > img {
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+#resumen-revistas > .revista > .desc-revista,
+#resumen-aranceles > .arancel > .desc-arancel {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.ultimo-folleto > div > img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
