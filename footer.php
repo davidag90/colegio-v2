@@ -20,13 +20,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="container-fluid">
 
 		<div class="row px-4 g-3 pb-3">
-			<div class="col-md-6 col-lg-3">
+			<div class="col-xl-3 d-none d-xl-block">
 				<div class="footer-logo-wrap">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/footer-logo.png" alt="" class="footer-logo img-fluid">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/footer-logo.png" alt="" class="footer-logo">
 				</div>
 			</div><!-- col -->
 
-			<div class="col-md-6 col-lg-3">
+			<div class="col-12 col-md-6 col-lg-4 col-xl-3">
 				<h4 class="text-uppercase">Accesos Rápidos</h4>
 				<?php
 				wp_nav_menu(
@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				); ?>
 			</div><!-- col -->
 
-			<div class="col-md-6 col-lg-3">
+			<div class="col-12 col-md-6 col-lg-4 col-xl-3">
 				<h4 class="text-uppercase">Colegio Odontológico</h4>
 				<?php
 				wp_nav_menu(
@@ -56,7 +56,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				); ?>
 			</div><!-- col -->
 
-			<div class="col-md-6 col-lg-3">
+			<div class="col-12 col-md-6 col-lg-4 col-xl-3">
 				<h4 class="text-uppercase">Contacto</h4>
 				<p><i class="fa-solid fa-house"></i> Coronel Olmedo 35 - Córdoba (Argentina)</p>
 				<p><i class="fa-solid fa-phone"></i> <a href="tel:3514224209" class="link-light" target="_blank">(0351) 422-4209</a> / <a href="tel:3514251653" class="link-light">425-1653</a> / <a href="351422255" class="link-light">422-255</a></p>
