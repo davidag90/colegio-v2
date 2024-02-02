@@ -117,7 +117,7 @@ if( $posts->have_posts() ):
         $posts->the_post(); ?>
         
         <div class="modal" tabindex="-1" id="convenio-<?php echo get_the_ID(); ?>">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title"><?php the_title(); ?></h5>
