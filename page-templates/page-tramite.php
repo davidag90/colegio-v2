@@ -27,10 +27,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 			<div class="col-12 col-md-8">
 				<main class="site-main pb-5" id="main">
-					<?php
-					while ( have_posts() ):
-						the_post();
+					<?php while ( have_posts() ): ?>
+						<?php the_post(); ?>
+
+						<?php if(is_page(7881)): // "ID de Solicitud de Subsidio" ?>
+							<p class="d-none">7881 Detectada</p>
+							
+							<script>
+								window.location.replace("https://colodontcba.org.ar/colegio/comisiones-trabajo/comision-fondo-ayuda-solidario/");
+							</script>
+						<?php	endif; ?>
 						
+						<?php if(is_page(8046)): // ID de "Reválida Ética" ?>
+							<p class="d-none">8046 Detectada</p>
+							
+							<script>
+								window.location.replace("https://colodontcba.org.ar/colegio/comisiones-trabajo/comision-revalida-etica-especialidades/");
+							</script>
+						<?php endif; ?>
+						
+						<?
 						get_template_part( 'loop-templates/content', 'page' );
 					endwhile;
 					?>
@@ -41,22 +57,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div><!-- .row -->
 	</div><!-- #content -->
 </div><!-- #page-wrapper -->
-
-<?php if(is_page(7881)): // "ID de Solicitud de Subsidio" ?>
-	<p class="d-none">7881 Detectada</p>
-	
-	<script>
-		window.location.replace("https://colodontcba.org.ar/colegio/comisiones-trabajo/comision-fondo-ayuda-solidario/");
-	</script>
-<?php	endif; ?>
-
-<?php if(is_page(8046)): // ID de "Reválida Ética" ?>
-	<p class="d-none">8046 Detectada</p>
-	
-	<script>
-		window.location.replace("https://colodontcba.org.ar/colegio/comisiones-trabajo/comision-revalida-etica-especialidades/");
-	</script>
-<?php endif; ?>
 
 <?php
 get_footer();
