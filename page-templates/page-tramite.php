@@ -42,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #content -->
 </div><!-- #page-wrapper -->
 
-<?php if(is_page('solicitud-subsidio')): ?>
+<?php if(is_page(7881)): // "ID de Solicitud de Subsidio" ?>
 	<script>
 		document.addEventListener('DOMContentLoad', () => {
 			document.location = "https://colodontcba.org.ar/colegio/comisiones-trabajo/comision-fondo-ayuda-solidario/";
@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</script>
 <?php	endif; ?>
 
-<?php if(is_page('revalida-etica')): ?>
+<?php if(is_page(8046)): // ID de "Reválida Ética" ?>
 	<script>
 		document.addEventListener('DOMContentLoad', () => {
    		document.location = "https://colodontcba.org.ar/colegio/comisiones-trabajo/comision-revalida-etica-especialidades/";
