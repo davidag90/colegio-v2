@@ -196,9 +196,10 @@ function delete_archive_prefix() {
 	return false;
 }
 
+// JS complementario para presentación de Convenios
 function convenios_enqueue_scripts() {
 	if (is_page( 'convenios-beneficios' )):
-		wp_enqueue_script( 'convenios-js', get_stylesheet_directory_uri( ) . '/js/convenios.js', array() , '', true );
+		wp_enqueue_script( 'convenios-js', get_stylesheet_directory_uri() . '/src/js/convenios.js', array() , null, true );
 	endif;
 }
 
