@@ -484,7 +484,7 @@ if (! function_exists('mostrar_links_interes')) {
         ob_start();
 
         $args = array(
-            'post_type' => 'link_interes',
+            'post_type' => 'link-interes',
             'nopaging' => true
         );
         
