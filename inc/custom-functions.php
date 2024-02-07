@@ -218,4 +218,4 @@ function custom_cat_wp_title($title) {
 	return $title;
 }
 
-add_filter( 'wp_title', 'custom_cat_wp_title', 0);
+add_filter( 'wp_title', 'custom_cat_wp_title');
