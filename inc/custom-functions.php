@@ -217,4 +217,4 @@ function custom_doc_title_parts($title_parts) {
 	return $title_parts;
 }
 
-add_filter( 'document_title_parts', 'custom_doc_title_parts');
+add_filter( 'document_title_parts', 'custom_doc_title_parts', 0);
