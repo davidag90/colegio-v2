@@ -212,7 +212,7 @@ function custom_cat_wp_title($title) {
 
 		$filtered_title = str_replace(' archivos', '', $category);
 
-		return $filtered_title
+		return $filtered_title;
 	endif;
 
 	return $title;
