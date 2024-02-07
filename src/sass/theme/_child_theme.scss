@@ -522,3 +522,14 @@ path.forbidden {
         margin: 0;
     }
 }
+
+#links-interes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+#links-interes > .card > .card-body {
+    display: flex;
+    flex-direction: column;
+}

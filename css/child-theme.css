@@ -15086,7 +15086,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 #front-novedades {
-  background-image: linear-gradient(rgba(0, 0, 25, 0.75), rgba(0, 0, 25, 0.6)), url(../assets/bg-front-novedades.jpg);
+  background-image: linear-gradient(rgba(0, 0, 25, 0.9), rgba(0, 0, 25, 0.85)), url(../assets/bg-front-novedades.jpg);
   background-position: center top;
   background-size: cover;
 }
@@ -15466,6 +15466,17 @@ path.forbidden {
     margin: 0;
   }
 }
+#links-interes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+#links-interes > .card > .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
