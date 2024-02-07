@@ -213,4 +213,4 @@ function custom_cat_title($title) {
 	return $title;
 }
 
-add_filter( 'document_title', 'custom_cat_title');
+add_filter( 'document_title', 'custom_cat_title', 11);
