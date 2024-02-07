@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="archive-wrapper">
 	<div class="cat-header mb-5">
 		<div class="bg-primary text-light cat-title px-4 py-3">
-			<?php the_archive_title( '<h1 class="page-title display-5">', '</h1>' ); ?>
+			<h1 class="page-title display-5"><?php echo single_cat_title(); ?></h1>
 		</div>
 		<div class="bg-light bg-gradient px-4 py-2 border-5 border-bottom border-primary">
 			<?php the_archive_description( '<p class="text-dark text-muted taxonomy-description"><em>', '</em></p>' ); ?>
