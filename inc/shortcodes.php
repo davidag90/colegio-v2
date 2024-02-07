@@ -505,7 +505,7 @@ if (! function_exists('mostrar_links_interes')) {
                         echo '<div class="card-body">';
                             echo '<h3 class="card-title h4">' . $titulo . '</h3>';
                             echo '<p class="card-text">' . $desc . '</p>';
-                            echo '<a class="btn btn-primary mt-auto ms-auto" href="' . $link . '" target="_blank">Ver sitio web</a>';
+                            echo '<a class="btn btn-primary mt-auto ms-auto me-0" href="' . $link . '" target="_blank">Ver sitio web</a>';
                         echo '</div>'; // .card-body
                     echo '</div>'; // .card
                 endwhile;
