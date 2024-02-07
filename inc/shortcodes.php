@@ -477,3 +477,49 @@ if (! function_exists('mostrar_boletines')) {
 }
 
 add_shortcode('mostrar-boletines','mostrar_boletines');
+
+
+if (! function_exists('mostrar_links_interes')) {
+    function mostrar_links_interes() {
+        ob_start();
+
+        $args = array(
+            'post_type' => 'link_interes',
+            'nopaging' => true
+        );
+        
+        $query = new WP_Query($args);
+        
+        if ($query->have_posts()):
+            echo '<div id="links-interes">';
+                while($query->have_posts()):
+                    $query->the_post();
+                    
+                    $thumb = get_the_post_thumbnail_url();
+                    $titulo = get_the_title();
+                    $desc = get_field('desc');
+                    $link = get_field('link');
+
+                    echo '<div class="card h-100">';
+                        echo '<img class="' . $thumb . ' card-img-top">';
+                        echo '<div class="card-body">';
+                            echo '<h3 class="card-title h4">' . $titulo . '</h3>';
+                            echo '<p class="card-text">' . $desc . '</p>';
+                            echo '<a class="btn btn-primary" href="' . $link . '"></a>';
+                        echo '</div>'; // .card-body
+                    echo '</div>'; // .card
+                endwhile;
+            echo '</div>'; // #links-interes            
+            
+            wp_reset_postdata(); // Restablece los datos del post original
+        else:
+            echo '<p>No se encontró contenido de esta sección.</p>';
+        endif;
+        
+        $output = ob_get_clean();
+        
+        return $output;
+    }
+}
+
+add_shortcode('mostrar-links-interes', 'mostrar_links_interes');
