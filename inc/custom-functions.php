@@ -206,13 +206,15 @@ function convenios_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'convenios_enqueue_scripts' );
 
 
-function custom_cat_wp_title($title) {
+function custom_cat_title($title_parts) {
 	if(is_category()):
-		$filtered_title = str_replace(' archivos', '', $title);
-		return $filtered_title;
+		$filtered_title = str_replace(' archivos', '', $title_parts['title']);
+		$title_parts['title'] = $filtered_title;
+
+		return $title_parts;
 	endif;
 
-	return $title;
+	return $title_parts;
 }
 
-add_filter( 'wp_title', 'custom_cat_wp_title');
+add_filter( 'document_title_parts', 'custom_cat_title');
