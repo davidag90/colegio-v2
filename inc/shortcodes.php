@@ -501,11 +501,11 @@ if (! function_exists('mostrar_links_interes')) {
                     $link = get_field('link');
 
                     echo '<div class="card h-100">';
-                        echo '<img class="' . $thumb . ' card-img-top">';
+                        echo '<img class="card-img-top" src="' . $thumb . '">';
                         echo '<div class="card-body">';
                             echo '<h3 class="card-title h4">' . $titulo . '</h3>';
                             echo '<p class="card-text">' . $desc . '</p>';
-                            echo '<a class="btn btn-primary" href="' . $link . '"></a>';
+                            echo '<a class="btn btn-primary" href="' . $link . '" target="_blank">Ver sitio web</a>';
                         echo '</div>'; // .card-body
                     echo '</div>'; // .card
                 endwhile;
