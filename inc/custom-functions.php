@@ -207,7 +207,7 @@ add_action( 'wp_enqueue_scripts', 'convenios_enqueue_scripts' );
 
 
 function custom_single_cat_title($title) {
-	str_replace(' archivos', '', $title);
+	$title = str_replace('archivos', '', $title);
 	return $title;
 }
 
