@@ -204,13 +204,3 @@ function convenios_enqueue_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'convenios_enqueue_scripts' );
-
-
-function custom_cat_title($title) {
-	/* $filtered_title = str_replace(' archivos', '', $title_parts['title']); */
-	$title = 'Mi titulo';/* $filtered_title */
-
-	return $title;
-}
-
-add_filter( 'document_title', 'custom_cat_title', 11);
