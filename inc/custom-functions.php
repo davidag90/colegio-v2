@@ -207,7 +207,7 @@ add_action( 'wp_enqueue_scripts', 'convenios_enqueue_scripts' );
 
 
 function custom_cat_wp_title($title) {
-	if(is_category())):
+	if(is_category()):
 		$category = single_cat_title('', false);
 
 		$filtered_title = str_replace(' archivos', '', $category);
