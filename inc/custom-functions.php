@@ -9,7 +9,7 @@ function custom_cf7_lib_loading() {
 
 	$parent = $post->post_parent;
 	
-	if (is_page('contacto') || $parent === 19) { // Chequea si es la página de Contacto o cualquiera de las sub-páginas de Comisiones
+	if (is_page('contacto') || $parent == 19) { // Chequea si es la página de Contacto o cualquiera de las sub-páginas de Comisiones
 		if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
 			wpcf7_enqueue_scripts();
 		}
