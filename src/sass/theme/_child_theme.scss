@@ -100,6 +100,15 @@
 #main-menu > .menu-item > a:active {
     text-shadow: 0 0 3px 3px rgba(255,255,255,.5);
 }
+
+#front-searchbox {
+    max-width: 15rem;
+}
+
+#front-searchbox > .form-control::placeholder {
+    color: white;
+    opacity: 0.5;
+}
 // ---------------
 
 // Front-page

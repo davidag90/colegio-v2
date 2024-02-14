@@ -11,11 +11,9 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <nav id="main-nav" class="navbar navbar-expand-xl navbar-dark" aria-labelledby="main-nav-label">
-
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
 	</h2>
-
 
 	<div class="container-fluid">
 
@@ -23,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php get_template_part( 'global-templates/navbar-branding' ); ?>
 
 		<button
-			class="navbar-toggler"
+			class="navbar-toggler ms-auto"
 			type="button"
 			data-bs-toggle="collapse"
 			data-bs-target="#navbarNavDropdown"
@@ -33,23 +31,28 @@ defined( 'ABSPATH' ) || exit;
 		>
 			<span class="navbar-toggler-icon"></span>
 		</button>
+		
+		<div class="d-block d-xl-none break">&nbsp;</div>
 
-		<!-- The WordPress Menu goes here -->
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
-				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav ms-auto',
-				'fallback_cb'     => '',
-				'menu_id'         => 'main-menu',
-				'depth'           => 2,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-			)
-		);
-		?>
+		<div class="d-xl-flex flex-column align-items-end">
+			<!-- Search form -->
+			<?php get_search_form(); ?>
 
+			<!-- The WordPress Menu goes here -->
+			<?php wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'container_class' => 'collapse navbar-collapse',
+					'container_id'    => 'navbarNavDropdown',
+					'menu_class'      => 'navbar-nav ms-auto',
+					'fallback_cb'     => '',
+					'menu_id'         => 'main-menu',
+					'depth'           => 2,
+					'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				)
+			);
+			?>
+		</div><!-- .d-xl-flex -->
 	</div><!-- .container(-fluid) -->
 
 </nav><!-- #main-nav -->
