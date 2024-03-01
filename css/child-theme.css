@@ -15239,11 +15239,13 @@ figure.woocommerce-product-gallery__wrapper {
   margin-bottom: 1rem;
 }
 
-.footer-menu > li > a:link, .footer-menu > li > a:visited {
+.footer-menu > li > a:link,
+.footer-menu > li > a:visited {
   color: white;
 }
 
-.footer-menu > li > a:hover, .footer-menu > li > a:active {
+.footer-menu > li > a:hover,
+.footer-menu > li > a:active {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -15342,6 +15344,15 @@ figure.woocommerce-product-gallery__wrapper {
   border-bottom: 1px solid rgba(220, 220, 220, 0.5);
   padding: 1rem 1rem 0rem;
   background-color: rgba(200, 225, 250, 0.25);
+}
+
+.miembro-autoridades > .desc-autoridad > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.miembro-autoridades > .desc-autoridad > ul > li {
+  margin-bottom: 1rem;
 }
 
 #resumen-boletines {

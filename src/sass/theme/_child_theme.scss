@@ -1,548 +1,560 @@
 // Fonts
 /* oswald-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/oswald-v53-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald-v53-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* oswald-700 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/oswald-v53-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/oswald-v53-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* arimo-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Arimo';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/arimo-v29-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Arimo";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/arimo-v29-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* arimo-italic - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Arimo';
-    font-style: italic;
-    font-weight: 400;
-    src: url('../fonts/arimo-v29-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Arimo";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/arimo-v29-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* arimo-700 - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Arimo';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/arimo-v29-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Arimo";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/arimo-v29-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* arimo-700italic - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Arimo';
-    font-style: italic;
-    font-weight: 700;
-    src: url('../fonts/arimo-v29-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Arimo";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/arimo-v29-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 // Global
 .wrapper {
-    padding-top: 0;
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #footer-wrapper {
-    padding-top: 1.5rem;
+  padding-top: 1.5rem;
 }
 
 .footer-logo {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
 }
 
 .custom-header p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 // Navbar
 #main-nav {
-    background-color: rgba(37,80,101,1);
+  background-color: rgba(37, 80, 101, 1);
 }
 
 .custom-logo {
-    height: 44px;
-    width: auto;
-    min-width: 100%;
+  height: 44px;
+  width: auto;
+  min-width: 100%;
 }
 
 @include media-breakpoint-up(lg) {
-    .custom-logo {
-        height: 50px;
-    }
+  .custom-logo {
+    height: 50px;
+  }
 }
 
 #main-menu > .menu-item > a {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #main-menu > .menu-item > a:link,
 #main-menu > .menu-item > a:visited {
-    color: white;
+  color: white;
 }
 
 #main-menu > .menu-item > a:hover,
 #main-menu > .menu-item > a:active {
-    text-shadow: 0 0 3px 3px rgba(255,255,255,.5);
+  text-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
 }
 
 #front-searchbox {
-    max-width: 15rem;
+  max-width: 15rem;
 }
 
 #front-searchbox > .form-control::placeholder {
-    color: white;
-    opacity: 0.5;
+  color: white;
+  opacity: 0.5;
 }
 // ---------------
 
 // Front-page
 #accesos-rapidos {
-    display: flex;
-    gap: 0.75rem 1.25rem;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 0.75rem 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #accesos-rapidos > a {
-    aspect-ratio: 1/1;
-    box-shadow: 0px 2px 2px rgba(25,50,100,.4);
-    text-decoration: none!important;
-    transition: box-shadow .3s;
-    transition: opacity .3s;
-    width: 120px;
-    min-width: 120px;
-    opacity: 0.85;
+  aspect-ratio: 1/1;
+  box-shadow: 0px 2px 2px rgba(25, 50, 100, 0.4);
+  text-decoration: none !important;
+  transition: box-shadow 0.3s;
+  transition: opacity 0.3s;
+  width: 120px;
+  min-width: 120px;
+  opacity: 0.85;
 }
 
 #accesos-rapidos > a:hover {
-    box-shadow: 0 2px 8px rgba(25,50,100,.85);
-    transition: box-shadow .3s;
-    transition: opacity .3s;
-    opacity: 1;
+  box-shadow: 0 2px 8px rgba(25, 50, 100, 0.85);
+  transition: box-shadow 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
 }
 
 #front-novedades {
-    background-image: linear-gradient(rgba(0,0,25,.9), rgba(0,0,25,.85)), url(../assets/bg-front-novedades.jpg);
-    background-position: center top;
-    background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 25, 0.9), rgba(0, 0, 25, 0.85)),
+    url(../assets/bg-front-novedades.jpg);
+  background-position: center top;
+  background-size: cover;
 }
 
 #front-novedades .front-novedad {
-    background-color: transparent;
-    border: 0;
-    color: white;
+  background-color: transparent;
+  border: 0;
+  color: white;
 }
 
 #front-novedades .front-novedad .post-date.text-muted {
-    color: white !important;
-    opacity: 0.75;
-    margin-bottom: 0.25rem;
+  color: white !important;
+  opacity: 0.75;
+  margin-bottom: 0.25rem;
 }
 
 #front-novedades .front-novedad .card-body .card-title > a:link,
 #front-novedades .front-novedad .card-body .card-title > a:visited {
-    text-decoration: none;
-    color: rgba(255,255,255,.8);
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
 }
 #front-novedades .front-novedad .card-body .card-title > a:hover,
 #front-novedades .front-novedad .card-body .card-title > a:active {
-    text-decoration: underline;
-    text-underline-offset: 0.25rem;
-    color: rgba(255,255,255,1);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  color: rgba(255, 255, 255, 1);
 }
 
 #front-novedades .splide__arrow--prev {
-    left: .5rem;
+  left: 0.5rem;
 }
 
 #front-novedades .splide__arrow--next {
-    right: .5rem;
+  right: 0.5rem;
 }
 
 @include media-breakpoint-up(sm) {
-    #front-novedades .splide__arrow--prev {
-        left: 0;
-    }
-    
-    #front-novedades .splide__arrow--next {
-        right: 0;
-    }
+  #front-novedades .splide__arrow--prev {
+    left: 0;
+  }
+
+  #front-novedades .splide__arrow--next {
+    right: 0;
+  }
 }
 
 #front-novedades .splide__pagination {
-    margin-bottom: -2.5rem;
+  margin-bottom: -2.5rem;
 }
 
 .tramites-accesos > ul {
-    list-style-type: none;
-    padding-left: 0;
-    column-gap: 2rem;
-    column-count: 1;
+  list-style-type: none;
+  padding-left: 0;
+  column-gap: 2rem;
+  column-count: 1;
 }
 
 .tramites-accesos > ul > li {
-    line-height: 2.25rem;
-    text-decoration: underline;
-    text-underline-offset: 0.2rem;
+  line-height: 2.25rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
 }
 
 .tramites-accesos > ul > li::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\2b";
-    padding-right: 0.3rem;
-    font-size: 0.75rem;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\2b";
+  padding-right: 0.3rem;
+  font-size: 0.75rem;
 }
 
 @include media-breakpoint-up(sm) {
-    .tramites-accesos > ul {
-        column-count: 2;
-    }
+  .tramites-accesos > ul {
+    column-count: 2;
+  }
 }
 
 @include media-breakpoint-up(md) {
-    #acceso-tramites-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
+  #acceso-tramites-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 @include media-breakpoint-up(xl) {
-    .tramites-accesos > ul {
-        column-count: 3;
-    }
+  .tramites-accesos > ul {
+    column-count: 3;
+  }
 }
 // ---------------
 
 // Single
 .cat-header p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .next-post-nav {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .prev-post-nav {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 // Footer
 .footer-menu {
-    list-style-position: inside;
-    list-style-type: none;
-    padding: 0;
+  list-style-position: inside;
+  list-style-type: none;
+  padding: 0;
 }
 
 .footer-menu > li {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-.footer-menu > li > a:link, .footer-menu > li > a:visited {
-    color: white;
+.footer-menu > li > a:link,
+.footer-menu > li > a:visited {
+  color: white;
 }
 
-.footer-menu > li > a:hover, .footer-menu > li > a:active {
-    color: rgba(255,255,255,.5);
+.footer-menu > li > a:hover,
+.footer-menu > li > a:active {
+  color: rgba(255, 255, 255, 0.5);
 }
 // ---------------
 
 // Utilidades
 .width-100 {
-    position: relative;
-    width: 100vw;
-    margin-left: -50vw;
-    left: 50%;
+  position: relative;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
 }
 
 .break {
-    flex-basis: 100%;
-    height: 0;
+  flex-basis: 100%;
+  height: 0;
 }
 
 .card-img-top-wrap {
-    aspect-ratio: 4/5;
-    overflow: hidden;
+  aspect-ratio: 4/5;
+  overflow: hidden;
 }
 
 .card-img-top-wrap .card-img-top {
-    height: 100%;
-    object-fit: cover;
+  height: 100%;
+  object-fit: cover;
 }
 // ---------------
 
 // Widgets
 .widget {
-    padding: 1rem;
-    background: rgb(250,250,250);
-    margin-bottom: 2rem;
-    border: 1px solid rgb(240,240,240);
+  padding: 1rem;
+  background: rgb(250, 250, 250);
+  margin-bottom: 2rem;
+  border: 1px solid rgb(240, 240, 240);
 }
 
 .widget .widget-title {
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgb(240,240,240);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgb(240, 240, 240);
 }
 
 .widget_recent_entries .widget-title::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\f0a1";
-    padding-right: 0.25em;
-    font-size: 1em;    
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f0a1";
+  padding-right: 0.25em;
+  font-size: 1em;
 }
 
 .widget_recent_entries > ul,
 .widget_nav_menu .menu {
-    padding-left: 0;
-    margin-left: 0;
-    list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
 }
 
 .widget_recent_entries > ul > li,
 .widget_nav_menu .menu > li {
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
 }
 
 .widget_recent_entries > ul > li > a::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-regular);
-    content: "\f15c";
-    padding-right: 0.5rem;
-    font-size: 1em;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-regular);
+  content: "\f15c";
+  padding-right: 0.5rem;
+  font-size: 1em;
 }
 
 #nav_menu-8.widget_nav_menu .widget-title::before,
 #nav_menu-5.widget_nav_menu .widget-title::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\f0e7";
-    padding-right: 0.25em;
-    font-size: 1em;    
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f0e7";
+  padding-right: 0.25em;
+  font-size: 1em;
 }
 
 .widget_nav_menu .menu > li > a::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-solid);
-    content: "\f061";
-    padding-right: 0.5rem;
-    font-size: 1em;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f061";
+  padding-right: 0.5rem;
+  font-size: 1em;
 }
 
 // Autoridades
 .miembro-autoridades {
-    border-right: 1px solid rgba(220,220,220,0.5);
-    border-bottom: 1px solid rgba(220,220,220,0.5);
-    padding: 1rem 1rem 0rem;
-    background-color: rgba(200,225,250,0.25);
+  border-right: 1px solid rgba(220, 220, 220, 0.5);
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+  padding: 1rem 1rem 0rem;
+  background-color: rgba(200, 225, 250, 0.25);
+}
+
+.miembro-autoridades > .desc-autoridad > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.miembro-autoridades > .desc-autoridad > ul > li {
+  margin-bottom: 1rem;
 }
 
 // Aranceles y Boletines
 #resumen-boletines {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
 }
 
 @include media-breakpoint-up(md) {
-    #resumen-boletines {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  #resumen-boletines {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @include media-breakpoint-up(lg) {
-    #resumen-boletines {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  #resumen-boletines {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @include media-breakpoint-up(xl) {
-    #resumen-boletines {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
+  #resumen-boletines {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 #resumen-boletines > .boletin {
-    opacity: 0.8;
-    box-shadow: 0;
-    transition: opacity 0.25s;
-    transition: box-shadow 0.25s;
-    height: 100%;
+  opacity: 0.8;
+  box-shadow: 0;
+  transition: opacity 0.25s;
+  transition: box-shadow 0.25s;
+  height: 100%;
 }
 
 #resumen-boletines > .boletin:hover {
-    opacity: 1;
-    box-shadow: 1px 1px 3px rgba(25,50,100,.5);
-    transition: opacity 0.25s;
-    transition: box-shadow 0.25s;
+  opacity: 1;
+  box-shadow: 1px 1px 3px rgba(25, 50, 100, 0.5);
+  transition: opacity 0.25s;
+  transition: box-shadow 0.25s;
 }
 
 // Convenios
 #lista-rubros > .list-group-item {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 .convenio > .card > .card-header {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 // Comisiones de Trabajo - Tramites
 #comisiones-trabajo,
 #tramites-online {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
 }
 
 @include media-breakpoint-up(lg) {
-    #comisiones-trabajo,
-    #tramites-online {
-        grid-template-columns: 1fr 1fr;
-    }
+  #comisiones-trabajo,
+  #tramites-online {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @include media-breakpoint-up(xxl) {
-    #comisiones-trabajo,
-    #tramites-online {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  #comisiones-trabajo,
+  #tramites-online {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 // Delegados Departamentales
 .content-departamento {
-    transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .svg-map-wrapper > svg {
-    max-width: 420px;
-    height: auto;
+  max-width: 420px;
+  height: auto;
 }
 
 .svg-map-wrapper > svg path:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .svg-map-wrapper > svg path.not-selected {
-    fill: rgba(73,160,201,0.2);
-    stroke: rgba(15, 32, 40, 0.25);
-    stroke-width: 0.5;
-    transition: all 1s ease;
+  fill: rgba(73, 160, 201, 0.2);
+  stroke: rgba(15, 32, 40, 0.25);
+  stroke-width: 0.5;
+  transition: all 1s ease;
 }
 
 path.selected {
-    fill: rgb(73,160,201);
-    transition: all 0.25s ease;
+  fill: rgb(73, 160, 201);
+  transition: all 0.25s ease;
 }
 
 path.forbidden {
-    cursor: not-allowed !important;
+  cursor: not-allowed !important;
 }
 
 // Revista El Espejo y Aranceles
 #resumen-revistas,
 #resumen-aranceles {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 @include media-breakpoint-up(md) {
-    #resumen-revistas,
-    #resumen-aranceles {
-        grid-template-columns: 1fr 1fr;
-    }
+  #resumen-revistas,
+  #resumen-aranceles {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 #resumen-revistas > .revista,
 #resumen-aranceles > .arancel {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
 }
 
 #resumen-revistas > .revista > .thumb-revista,
 #resumen-aranceles > .arancel > .thumb-arancel {
-    background-color: lightgray;
-    min-width: 100px;
-    max-width: 120px;
-    width: 100%;
+  background-color: lightgray;
+  min-width: 100px;
+  max-width: 120px;
+  width: 100%;
 }
 
 #resumen-revistas > .revista > .thumb-revista > img,
 #resumen-aranceles > .arancel > .thumb-arancel > img {
-    box-shadow: 2px 2px 1px rgba(0,0,0,.3);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
 #resumen-revistas > .revista > .desc-revista,
 #resumen-aranceles > .arancel > .desc-arancel {
-    flex-grow: 1;
-    text-align: left;
+  flex-grow: 1;
+  text-align: left;
 }
 
 // Valor Min Consulta
 .ultimo-folleto > div > img {
-    object-fit: cover;
-    aspect-ratio: 16/9;
+  object-fit: cover;
+  aspect-ratio: 16/9;
 }
 
 .favs-marco-laboral {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 .favs-marco-laboral .btn {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 @include media-breakpoint-up(md) {
-    .favs-marco-laboral {
-        flex-direction: row;
-        justify-content: center;
-        margin: 0;
-    }
+  .favs-marco-laboral {
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+  }
 
-    .favs-marco-laboral .btn {
-        margin: 0;
-    }
+  .favs-marco-laboral .btn {
+    margin: 0;
+  }
 }
 
 #links-interes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 #links-interes > .card > .card-body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
