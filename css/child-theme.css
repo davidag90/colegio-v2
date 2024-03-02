@@ -15523,6 +15523,10 @@ path.forbidden {
   flex-direction: column;
 }
 
+.wpcf7 .wpcf7-form label {
+  width: auto !important;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

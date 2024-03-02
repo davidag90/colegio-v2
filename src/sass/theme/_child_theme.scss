@@ -558,3 +558,7 @@ path.forbidden {
   display: flex;
   flex-direction: column;
 }
+
+.wpcf7 .wpcf7-form label {
+  width: auto !important;
+}
