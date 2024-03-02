@@ -559,6 +559,10 @@ path.forbidden {
   flex-direction: column;
 }
 
-.wpcf7 .wpcf7-form label {
+.wpcf7-form label {
   width: auto !important;
+}
+
+.wpcf7-form-control.wpcf7-checkbox .wpcf7-list-item {
+  display: block;
 }
