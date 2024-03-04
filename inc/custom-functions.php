@@ -221,3 +221,14 @@ function convenios_enqueue_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'convenios_enqueue_scripts');
+
+// Contact Form 7 blank fields filter
+add_filter('wpcf7_mail_components', 'remove_blank_lines');
+
+function remove_blank_lines($mail)
+{
+	if (is_array($mail) && !empty($mail['body']))
+		$mail['body'] = preg_replace('|\n\s*\n|', "\n\n", $mail['body']);
+
+	return $mail;
+}
