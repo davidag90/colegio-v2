@@ -11,7 +11,7 @@ function custom_cf7_lib_loading()
 	$parent = $post->post_parent;
 
 	// Chequea si es la página de Contacto, cualquiera de las sub-páginas de Comisiones o la de Solicitud Accion Com
-	if (is_page('contacto') || $parent == 19 || is_page('solicitud-materiales-accion-comunitaria')) {
+	if (is_page('contacto') || $parent == 19 || is_page(8159)) {
 		if (function_exists('wpcf7_enqueue_scripts')) {
 			wpcf7_enqueue_scripts();
 		}
