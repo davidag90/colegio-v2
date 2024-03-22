@@ -15542,7 +15542,7 @@ path.forbidden {
 }
 @media (min-width: 768px) {
   .post.category-novedades .wp-post-image {
-    width: auto;
+    width: 220px;
   }
 }
 .has-blue-color,
