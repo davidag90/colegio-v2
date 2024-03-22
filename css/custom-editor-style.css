@@ -431,7 +431,7 @@ progress {
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: rgb(73, 160, 201);
+  --bs-primary: rgb(64, 119, 144);
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -439,7 +439,7 @@ progress {
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: rgb(15, 32, 40);
-  --bs-primary-rgb: 73, 160, 201;
+  --bs-primary-rgb: 64, 119, 144;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -470,8 +470,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: rgb(73, 160, 201);
-  --bs-link-hover-color: #3a80a1;
+  --bs-link-color: rgb(64, 119, 144);
+  --bs-link-hover-color: #335f73;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -554,13 +554,13 @@ progress {
 
 .table-primary {
   --bs-table-color: #000;
-  --bs-table-bg: #dbecf4;
-  --bs-table-border-color: #c5d4dc;
-  --bs-table-striped-bg: #d0e0e8;
+  --bs-table-bg: #d9e4e9;
+  --bs-table-border-color: #c3cdd2;
+  --bs-table-striped-bg: #ced9dd;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #c5d4dc;
+  --bs-table-active-bg: #c3cdd2;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #cbdae2;
+  --bs-table-hover-bg: #c9d3d8;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -871,7 +871,7 @@ progress {
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: rgb(73, 160, 201);
+  --bs-primary: rgb(64, 119, 144);
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -879,7 +879,7 @@ progress {
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: rgb(15, 32, 40);
-  --bs-primary-rgb: 73, 160, 201;
+  --bs-primary-rgb: 64, 119, 144;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -910,8 +910,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: rgb(73, 160, 201);
-  --bs-link-hover-color: #3a80a1;
+  --bs-link-color: rgb(64, 119, 144);
+  --bs-link-hover-color: #335f73;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -923,8 +923,8 @@ progress {
 }
 
 .text-bg-primary {
-  color: #000 !important;
-  background-color: RGBA(73, 160, 201, var(--bs-bg-opacity, 1)) !important;
+  color: #fff !important;
+  background-color: RGBA(64, 119, 144, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-secondary {
@@ -963,10 +963,10 @@ progress {
 }
 
 .link-primary {
-  color: rgb(73, 160, 201) !important;
+  color: rgb(64, 119, 144) !important;
 }
 .link-primary:hover, .link-primary:focus {
-  color: #6db3d4 !important;
+  color: #335f73 !important;
 }
 
 .link-secondary {
@@ -5290,16 +5290,16 @@ progress {
 
 .has-primary-color,
 .has-primary-color:visited {
-  color: rgb(73, 160, 201);
+  color: rgb(64, 119, 144);
 }
 
 .has-primary-background-color {
-  background-color: rgb(73, 160, 201);
-  border-color: rgb(73, 160, 201);
+  background-color: rgb(64, 119, 144);
+  border-color: rgb(64, 119, 144);
 }
 
 .wp-block-button:hover .wp-block-button__link.has-white-background-color.has-primary-color {
-  color: rgb(73, 160, 201);
+  color: rgb(64, 119, 144);
 }
 
 .has-secondary-color,
