@@ -15531,6 +15531,20 @@ path.forbidden {
   display: block;
 }
 
+.post.category-novedades .wp-post-image {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .post.category-novedades .wp-post-image {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .post.category-novedades .wp-post-image {
+    width: auto;
+  }
+}
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

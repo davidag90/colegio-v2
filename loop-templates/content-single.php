@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'medium', array(
-		'class'	=> 'float-start me-4 mb-4'
+		'class'	=> 'float-sm-start me-sm-4 mb-4'
 	) ); ?>
 
 	<div class="entry-content">

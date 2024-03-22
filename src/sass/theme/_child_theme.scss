@@ -566,3 +566,19 @@ path.forbidden {
 .wpcf7-form-control.wpcf7-checkbox .wpcf7-list-item {
   display: block;
 }
+
+.post.category-novedades .wp-post-image {
+  width: 100%;
+}
+
+@include media-breakpoint-up(sm) {
+  .post.category-novedades .wp-post-image {
+    width: 50%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .post.category-novedades .wp-post-image {
+    width: auto;
+  }
+}
