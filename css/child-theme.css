@@ -15545,6 +15545,10 @@ path.forbidden {
     width: 220px;
   }
 }
+.post-navigation {
+  clear: both;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
