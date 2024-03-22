@@ -25,12 +25,10 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-content">
 
-		<?php
-		the_content();
-		
-		understrap_link_pages();
-		?>
+		<?php the_content(); ?>
 
 	</div><!-- .entry-content -->
+	
+	<div class="paging"><?php understrap_link_pages(); ?></div>
 	
 </article><!-- #post-<?php the_ID(); ?> -->
