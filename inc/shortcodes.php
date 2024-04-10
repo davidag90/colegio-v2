@@ -227,7 +227,7 @@ if (! function_exists('mostrar_comisiones_trabajo')) {
         ob_start();
 
         $parent_id = get_the_ID();
-        $child_pages = get_pages(array( 'child_of' => $parent_id ));
+        $child_pages = get_pages(array( 'parent' => $parent_id ));
         
         if (!empty($child_pages)):
             echo '<div id="comisiones-trabajo">';
