@@ -83,7 +83,7 @@ if (! function_exists('mostrar_aranceles_vigentes')) {
         $query = new WP_Query($args);
         
         if ($query->have_posts()):
-            echo '<div id="resumen-aranceles mb-5">';
+            echo '<div id="resumen-aranceles" class="mb-5">';
                 $c = 0;
                 
                 while($query->have_posts()):
