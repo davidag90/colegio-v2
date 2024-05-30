@@ -75,7 +75,7 @@ if (! function_exists('mostrar_aranceles_vigentes')) {
             'post_type' => 'arancel',
             'nopaging' => true,
             'date_query' => array(
-                //'after' => '2020-09-01',
+                'after' => '2020-09-01',
                 'inclusive' => true
             )
         );
@@ -83,7 +83,9 @@ if (! function_exists('mostrar_aranceles_vigentes')) {
         $query = new WP_Query($args);
         
         if ($query->have_posts()):
-            echo '<div id="resumen-aranceles">';
+            echo '<div id="resumen-aranceles mb-5">';
+                $c = 0;
+                
                 while($query->have_posts()):
                     $query->the_post();
                     
@@ -104,6 +106,36 @@ if (! function_exists('mostrar_aranceles_vigentes')) {
                 endwhile;
             echo '</div>'; // #resumen-aranceles            
             wp_reset_postdata(); // Restablece los datos del post original
+        else:
+            echo '<p>No se encontró contenido de esta sección.</p>';
+        endif;
+
+        $args = array(
+            'post_type' => 'arancel',
+            'nopaging' => true,
+            'date_query' => array(
+                'before' => '2020-09-01',
+                'inclusive' => true
+            )
+        );
+        
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()):
+            echo '<div id="aranceles-antiguos">';
+                echo '<h2>Aranceles anteriores</h2>';
+                echo '<div class="list-group">';
+                    while($query->have_posts()):
+                        $query->the_post();
+                        
+                        $titulo = get_the_title();
+                        $link = get_field('link_doc');
+                        
+                        echo '<a href="' . $link . '" target="_blank" class="list-group-item list-group-item-action">' . $titulo . '</a>';
+                    endwhile;
+                echo '</div>'; // .list-group
+            echo '</div>'; // #aranceles-antiguos
+            wp_reset_postdata();
         else:
             echo '<p>No se encontró contenido de esta sección.</p>';
         endif;
