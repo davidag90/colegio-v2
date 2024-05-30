@@ -115,7 +115,7 @@ if (! function_exists('mostrar_aranceles_vigentes')) {
             'nopaging' => true,
             'date_query' => array(
                 'before' => '2020-09-01',
-                'inclusive' => true
+                'inclusive' => false
             )
         );
         
