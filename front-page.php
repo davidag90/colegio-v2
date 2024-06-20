@@ -107,7 +107,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="d-block d-md-none break">&nbsp;</div>
 
-					<a href="https://www.indexweb.com.ar/Matriculas/APRENDIZ.ASPX" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light">
+					<a href="<?= home_url() ?>/novedades/actualizacion-registro-aprendiz-copc/" class="d-flex align-items-center justify-content-center flex-column text-center rounded-5 p-2 bg-primary bg-gradient link-light">
 						<span class="d-block mb-2"><i class="fa-solid fa-book fa-3x fa-fw"></i></span>
 						<span class="d-block fs-6">Aprendiz</span>
 					</a>
