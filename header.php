@@ -38,6 +38,33 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
+
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div class="modal fade"	id="aviso-aprendiz" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="aviso-aprendiz-titulo" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="aviso-aprendiz-titulo">Registro Aprendiz COPC</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>Se encuentra cerrada la convocatoria al Registro de Aprendices y Tutores.</p>
+				<p>Próximamente, vamos a comunicar en todos nuestros medios oficiales la reapertura del programa. </p>
+				<p>Muchas gracias.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Optional: Place to the bottom of scripts -->
+<script>
+	const myModal = new bootstrap.Modal(
+		document.getElementById("aviso-aprendiz"),
+		options,
+	);
+</script>
+
 <div class="site d-flex flex-column min-vh-100" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
