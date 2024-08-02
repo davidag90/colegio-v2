@@ -112,7 +112,9 @@ $container = get_theme_mod('understrap_container_type');
 				</div>
 			</div>
 		</div>
-		<div class="width-100">
+
+		<!-- Nuevo ingreso Pacientes, pendiente aprobación -->
+		<!-- <div class="width-100">
 			<div id="ingreso-pacientes">
 				<a href="<?php echo home_url(); ?>/pacientes/">
 					<picture>
@@ -121,7 +123,9 @@ $container = get_theme_mod('understrap_container_type');
 					</picture>
 				</a>
 			</div>
-		</div>
+		</div> -->
+		<!-- Nuevo ingreso Pacientes, pendiente aprobación -->
+
 		<div class="row">
 			<div class="content-area" id="primary">
 				<main class="site-main" id="main" role="main">
