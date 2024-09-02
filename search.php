@@ -1,16 +1,17 @@
 <?php
+
 /**
  * The template for displaying search results pages
  *
- * @package Understrap
+ * @package Colegio Theme 2
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' ); ?>
+$container = get_theme_mod('understrap_container_type'); ?>
 
 <div class="wrapper" id="search-wrapper">
 	<div class="custom-header mb-5">
@@ -21,18 +22,18 @@ $container = get_theme_mod( 'understrap_container_type' ); ?>
 			<!-- <p class="text-muted"><em></em></p> -->
 		</div>
 	</div>
-	
-	<div class="<?php echo esc_attr( $container ); ?> pb-5" id="content" tabindex="-1">
+
+	<div class="<?php echo esc_attr($container); ?> pb-5" id="content" tabindex="-1">
 		<div class="row">
 			<main class="site-main" id="main">
-				<?php if ( have_posts() ) :
-					while ( have_posts() ) :
+				<?php if (have_posts()) :
+					while (have_posts()) :
 						the_post();
 
-						get_template_part( 'loop-templates/content', 'search' );
+						get_template_part('loop-templates/content', 'search');
 					endwhile;
 				else :
-					get_template_part( 'loop-templates/content', 'none' );
+					get_template_part('loop-templates/content', 'none');
 				endif; ?>
 			</main>
 

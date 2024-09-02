@@ -1,12 +1,13 @@
 <?php
+
 /**
  * Partial template for content in page.php
  *
- * @package Understrap
+ * @package Colegio Theme 2
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">

@@ -1,8 +1,9 @@
 <?php
+
 /**
  * Dynamic return type for get_theme_mod()
  *
- * @package Understrap
+ * @package Colegio Theme 2
  */
 
 namespace Understrap\PHPStan;
@@ -21,7 +22,8 @@ use PHPStan\Type\TypeCombinator;
 /**
  * This class implements dynamic return types for Understrap specific theme mods.
  */
-class GetThemeModReturnType implements DynamicFunctionReturnTypeExtension {
+class GetThemeModReturnType implements DynamicFunctionReturnTypeExtension
+{
 
 	/**
 	 * Understrap specific theme modifications.
@@ -45,8 +47,7 @@ class GetThemeModReturnType implements DynamicFunctionReturnTypeExtension {
 		FunctionReflection $functionReflection,
 		FuncCall $functionCall,
 		Scope $scope
-	): Type
-	{
+	): Type {
 		$argType = $scope->getType($functionCall->getArgs()[0]->value);
 		$defaultType = ParametersAcceptorSelector::selectFromArgs(
 			$scope,

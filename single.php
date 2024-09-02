@@ -1,15 +1,16 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
- * @package Understrap
+ * @package Colegio Theme 2
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod('understrap_container_type');
 ?>
 
 <div class="wrapper" id="single-wrapper">
@@ -23,16 +24,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div>
 	</div>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 		<div class="row">
 			<div class="col-12 col-lg-8">
 				<main class="site-main" id="main">
 					<?php
-					while ( have_posts() ):
+					while (have_posts()) :
 						the_post();
-						
-						get_template_part( 'loop-templates/content', 'single' );
-						
+
+						get_template_part('loop-templates/content', 'single');
+
 						understrap_post_nav();
 					endwhile;
 					?>
@@ -41,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 
 			<div class="col-lg-4">
-				<?php dynamic_sidebar( 'right-sidebar-posts' ); ?>
+				<?php dynamic_sidebar('right-sidebar-posts'); ?>
 			</div>
 		</div><!-- .row -->
 

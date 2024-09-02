@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * Front page template file
+ *
+ * Specific template designed to manage the front page contents, which in this site must be contained by a Wordpress static page
+ *
+ * @package Colegio Theme 2
+ */
+
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
@@ -12,14 +21,15 @@ $container = get_theme_mod('understrap_container_type');
 			<div id="front-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
 				<div class="carousel-inner">
 					<?php
+					// Query args to feed Bootstrap Carousel with slides
 					$args = array(
-						'post_type'      => 'home_slides',   // Tipo de contenido personalizado
-						'posts_per_page' => 3               // Máximo de 3 posts por página
+						'post_type' => 'home_slides',		// Custom post type to feed hero slideshow
+						'posts_per_page' => 3           // Limit posts to show to 3 elements
 					);
 
 					$query = new WP_Query($args);
 
-					$c = 0;
+					$c = 0; // Counter to check first iteration and add "active" class needed for Boootstrap carousel component to work
 
 					if ($query->have_posts()) :
 						while ($query->have_posts()) : $query->the_post(); ?>
