@@ -8444,9 +8444,10 @@
 
 	var Splide = splide_min.exports;
 
-	// Add your custom JS here.
-	new Splide('.splide', {
+	/* Gets Splide library to generate a carousel on the homepage */
+	new Splide(".splide", {
 	  perPage: 4,
+	  // Responsive breakpoints
 	  breakpoints: {
 	    1200: {
 	      perPage: 3
@@ -8458,20 +8459,23 @@
 	      perPage: 1
 	    }
 	  },
-	  gap: '2rem'
+	  gap: "2rem"
 	}).mount();
 
-	// Lookeo de elementos de lista hijos de "list-group" en Resoluciones FACO
-	let listElems = document.querySelectorAll('#lista-resoluciones > li');
+	// Custom look for "list-group" items in "Resoluciones FACO" page
+	let listElems = document.querySelectorAll("#lista-resoluciones > li");
 	listElems.forEach(function (elem) {
-	  elem.classList.add('list-group-item');
+	  elem.classList.add("list-group-item");
 	});
 
-	// Snippet para capturar último dropdown a la derecha y asegurar alineación
-	// correcta que no se salga de la pantalla (clase .dropdown-menu-end)
-	const dropdownMenus = document.querySelectorAll('#main-menu > .dropdown > .dropdown-menu');
+	/* Checks for the existance of dropdown menus inside #main-menu,
+	selects the last one and assigns to it the class .dropdown-menu-end
+	in order to align the right end of the dropdown against the viewport
+	right limit */
+
+	const dropdownMenus = document.querySelectorAll("#main-menu > .dropdown > .dropdown-menu");
 	const lastDropdown = dropdownMenus.length - 1;
-	dropdownMenus[lastDropdown].classList.add('dropdown-menu-end');
+	dropdownMenus[lastDropdown].classList.add("dropdown-menu-end");
 
 	exports.Alert = alert;
 	exports.Button = button;
