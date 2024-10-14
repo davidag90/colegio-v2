@@ -1,23 +1,3 @@
-/* Gets Splide library to generate a carousel on the homepage */
-import Splide from "./assets/splide/js/splide.min.js";
-
-new Splide(".splide", {
-  perPage: 4,
-  // Responsive breakpoints
-  breakpoints: {
-    1200: {
-      perPage: 3,
-    },
-    992: {
-      perPage: 2,
-    },
-    576: {
-      perPage: 1,
-    },
-  },
-  gap: "2rem",
-}).mount();
-
 // Custom look for "list-group" items in "Resoluciones FACO" page
 let listElems = document.querySelectorAll("#lista-resoluciones > li");
 
