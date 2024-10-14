@@ -48,12 +48,19 @@ function theme_enqueue_styles() {
 	$js_version = $theme_version . '.' . filemtime(get_stylesheet_directory() . $theme_scripts);
 
 	wp_enqueue_script('child-understrap-scripts', get_stylesheet_directory_uri() . $theme_scripts, array(), $js_version, true);
+
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
 
-	wp_enqueue_script('splide-js', get_stylesheet_directory_uri() . '/src/js/assets/splide/js/splide.min.js', array(), '', true);
-	wp_enqueue_style('splide-css', get_stylesheet_directory_uri() . '/src/js/assets/splide/css/splide.min.css', array());
+	if (is_front_page() || is_page('pacientes')) {
+		wp_enqueue_script('splide-js', get_stylesheet_directory_uri() . '/src/js/assets/splide/js/splide.min.js', array(), '', true);
+		wp_enqueue_style('splide-css', get_stylesheet_directory_uri() . '/src/js/assets/splide/css/splide.min.css', array());
+	}
+
+	if (is_front_page()) {
+		wp_enqueue_script('front-page', get_stylesheet_directory_uri() . '/src/js/front-page.js', array(), null, true);
+	}
 
 	if (is_page('delegados-departamentales')) {
 		wp_enqueue_script('departamentos', get_stylesheet_directory_uri() . '/js/departamentos.js', array(), null, true);
@@ -61,6 +68,10 @@ function theme_enqueue_styles() {
 
 	if (is_page('bolsa-trabajo')) {
 		wp_enqueue_script('bolsa-trabajo', get_stylesheet_directory_uri() . '/src/js/bolsa-trabajo.js', array(), null, true);
+	}
+
+	if (is_page('pacientes')) {
+		wp_enqueue_script('pacientes', get_stylesheet_directory_uri() . '/src/js/pacientes.js', array(), null, true);
 	}
 
 	if (is_page('urgencias-odontologicas')) {
