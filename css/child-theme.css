@@ -15039,6 +15039,10 @@ figure.woocommerce-product-gallery__wrapper {
   background-color: rgb(37, 80, 101);
 }
 
+#main-nav.navbar-pink {
+  background-color: rgb(193, 79, 149);
+}
+
 .custom-logo {
   height: 44px;
   width: auto;

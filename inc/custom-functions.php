@@ -4,8 +4,7 @@ add_filter('wpcf7_load_js', '__return_false');
 add_filter('wpcf7_load_css', '__return_false');
 
 // Carga librerías CF7 solo en página Contacto
-function custom_cf7_lib_loading()
-{
+function custom_cf7_lib_loading() {
 	global $post;
 
 	$parent = $post->post_parent;
@@ -25,8 +24,7 @@ function custom_cf7_lib_loading()
 add_action('wp_enqueue_scripts', 'custom_cf7_lib_loading');
 
 // Desactiva widget blocks
-function disable_widget_blocks()
-{
+function disable_widget_blocks() {
 	remove_theme_support('widgets-block-editor');
 }
 
@@ -43,8 +41,7 @@ if (!function_exists('understrap_change_logo_class')) {
 	 *
 	 * @return string
 	 */
-	function understrap_change_logo_class($html)
-	{
+	function understrap_change_logo_class($html) {
 
 		$html = str_replace('class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html);
 		$html = str_replace('alt=""', 'title="Home" alt="logo"', $html);
@@ -55,8 +52,7 @@ if (!function_exists('understrap_change_logo_class')) {
 
 add_action('widgets_init', 'custom_sidebars_init');
 
-function custom_sidebars_init()
-{
+function custom_sidebars_init() {
 	register_sidebar(
 		array(
 			'name'          => __('Right Sidebar Posts', 'understrap'),
@@ -116,17 +112,27 @@ function custom_sidebars_init()
 			'after_title'   => '</h3>'
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => __('Sidebar Pacientes', 'understrap'),
+			'id'            => 'sidebar-pacientes',
+			'description'   => 'Barra lateral para sección de Pacientes',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>'
+		)
+	);
 }
 
-function custom_excerpt_length($length)
-{
+function custom_excerpt_length($length) {
 	return 20;
 }
 
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
-function understrap_all_excerpts_get_more_link($post_excerpt)
-{
+function understrap_all_excerpts_get_more_link($post_excerpt) {
 	if (is_admin() || !get_the_ID() || is_front_page() || is_archive() || is_page('convenios-beneficios')) {
 		return $post_excerpt;
 	}
@@ -140,8 +146,7 @@ function understrap_all_excerpts_get_more_link($post_excerpt)
 }
 
 if (!function_exists('register_footer_menus')) {
-	function register_footer_menus()
-	{
+	function register_footer_menus() {
 		register_nav_menus(
 			array(
 				'footer-menu-01' => 'Footer Menu 1',
@@ -158,8 +163,7 @@ if (!function_exists('understrap_post_nav')) {
 	 *
 	 * @global WP_Post|null $post The current post.
 	 */
-	function understrap_post_nav()
-	{
+	function understrap_post_nav() {
 		global $post;
 		if (!$post) {
 			return;
@@ -192,14 +196,12 @@ if (!function_exists('understrap_post_nav')) {
 add_filter('next_post_link', 'next_post_link_attributes');
 add_filter('previous_post_link', 'previous_post_link_attributes');
 
-function next_post_link_attributes($output)
-{
+function next_post_link_attributes($output) {
 	$injection = 'class="btn btn-outline-primary"';
 	return str_replace('<a href=', '<a ' . $injection . ' href=', $output);
 }
 
-function previous_post_link_attributes($output)
-{
+function previous_post_link_attributes($output) {
 	$injection = 'class="btn btn-outline-primary"';
 	return str_replace('<a href=', '<a ' . $injection . ' href=', $output);
 }
@@ -207,14 +209,12 @@ function previous_post_link_attributes($output)
 // Anula prefijos en templates de "Archive"
 add_filter('get_the_archive_title_prefix', 'delete_archive_prefix');
 
-function delete_archive_prefix()
-{
+function delete_archive_prefix() {
 	return false;
 }
 
 // JS complementario para presentación de Convenios
-function convenios_enqueue_scripts()
-{
+function convenios_enqueue_scripts() {
 	if (is_page('convenios-beneficios')) :
 		wp_enqueue_script('convenios-js', get_stylesheet_directory_uri() . '/src/js/convenios.js', array(), null, true);
 	endif;

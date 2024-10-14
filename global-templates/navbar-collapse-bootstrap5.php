@@ -10,7 +10,12 @@
 defined('ABSPATH') || exit;
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-xl navbar-dark" aria-labelledby="main-nav-label">
+<?php //Test pacientes 
+$slug = get_post_field('post_name', $post);
+$check_pacientes = $slug === 'pacientes';
+?>
+
+<nav id="main-nav" class="navbar navbar-expand-xl navbar-dark <?php if ($check_pacientes) echo 'navbar-pink' ?>" aria-labelledby="main-nav-label">
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e('Main Navigation', 'understrap'); ?>
 	</h2>
