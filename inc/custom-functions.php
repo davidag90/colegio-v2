@@ -133,7 +133,7 @@ function custom_excerpt_length($length) {
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
 function understrap_all_excerpts_get_more_link($post_excerpt) {
-	if (is_admin() || !get_the_ID() || is_front_page() || is_archive() || is_page('convenios-beneficios')) {
+	if (is_admin() || !get_the_ID() || is_front_page() || is_archive() || is_page('convenios-beneficios') || is_page('pacientes')) {
 		return $post_excerpt;
 	}
 

@@ -570,7 +570,7 @@ if (! function_exists('noticias_pacientes')) {
 
         if ($query->have_posts()):
             echo '<div id="noticias-pacientes">';
-            echo '<section class="splide" aria-label="Novedades">';
+            echo '<section class="splide p-2" aria-label="Novedades">';
             echo '<div class="splide__track">';
             echo '<ul class="splide__list">';
             while ($query->have_posts()) {
@@ -591,12 +591,11 @@ if (! function_exists('noticias_pacientes')) {
                 echo '<div class="card-body d-flex flex-column justify-content-start">';
                 echo '<div class="post-date text-muted">' . $date . '</div>';
                 echo '<h3 class="card-title h4"><a href="' . $permalink . '">' . $title . '</a></h3>';
-                echo '<p class="mb-0">' . $excerpt . '...</p>';
-                echo '</div>'; // .card-body
-
+                echo '<p>' . $excerpt . '</p>';
                 echo '<div class="read-more mt-auto pt-3 text-end">';
-                echo '<a class="btn btn-outline-light understrap-read-more-link" href="' . $permalink . '">' . __('Read More...', 'understrap') . '<span class="screen-reader-text"> from ' . $title . '</span></a>';
+                echo '<a class="btn btn-primary link-light understrap-read-more-link" href="' . $permalink . '">Leer más <span class="screen-reader-text"> sobre ' . $title . ' </span><i class="fa-solid fa-arrow-right-long"></i></a>';
                 echo '</div>'; // .read-more
+                echo '</div>'; // .card-body
                 echo '</div>'; // .noticia-pacientes.card
                 echo '</li>'; // col-12 col-md-4 col-lg-3
             }
