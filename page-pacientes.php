@@ -27,7 +27,7 @@ $container = get_theme_mod('understrap_container_type');
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-12 col-lg-8">
+			<div class="col-12 col-lg-8 order-2 order-lg-1">
 				<main class="site-main" id="main">
 					<?php
 					while (have_posts()) :
@@ -39,8 +39,10 @@ $container = get_theme_mod('understrap_container_type');
 				</main>
 			</div>
 
-			<div class="col-12 col-lg-4">
-				<?php dynamic_sidebar('sidebar-pacientes'); ?>
+			<div class="col-12 col-lg-4 order-1 order-lg-2">
+				<div class="sticky-lg-top pt-lg-5">
+					<?php dynamic_sidebar('sidebar-pacientes'); ?>
+				</div>
 			</div>
 		</div><!-- .row -->
 	</div><!-- #content -->
