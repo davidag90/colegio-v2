@@ -14,15 +14,24 @@ defined('ABSPATH') || exit;
 get_header();
 
 $container = get_theme_mod('understrap_container_type');
-
+$thumb_mobile = get_field('thumb_mobile');
+$thumb_full = get_the_post_thumbnail_url();
 ?>
+
 <div class="wrapper" id="page-wrapper">
 	<h1 class="d-none"><?php echo get_the_title(); ?></h1>
 	<div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 		<div class="row">
 			<div class="col-12">
-				<div id="header-pacientes" class="my-5">
-					<img src="<?php echo get_the_post_thumbnail_url() ?>" alt="Id eiusmod quis do duis ea ex elit officia commodo commodo ullamco amet laboris." />
+				<div id="header-pacientes" class="mb-5 mt-md-5">
+					<?php if ($thumb_mobile): ?>
+						<picture>
+							<source srcset="<?php echo $thumb_mobile; ?>" class="d-block w-100" media="(max-width: 768px)" />
+							<img src="<?php echo $thumb_full; ?>" class="d-block w-100" />
+						</picture>
+					<?php else: ?>
+						<img src="<?php echo $thumb_full; ?>" class="d-block w-100" />
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
