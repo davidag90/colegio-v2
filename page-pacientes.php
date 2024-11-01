@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
 get_header();
 
 $container = get_theme_mod('understrap_container_type');
-$thumb_mobile = get_field('thumb_mobile');
+$thumb_mobile = get_field('thumbnail_mobile');
 $thumb_full = get_the_post_thumbnail_url();
 ?>
 
