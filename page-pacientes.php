@@ -27,10 +27,10 @@ $thumb_full = get_the_post_thumbnail_url();
 					<?php if ($thumb_mobile): ?>
 						<picture>
 							<source srcset="<?php echo $thumb_mobile; ?>" class="d-block w-100" media="(max-width: 768px)" />
-							<img src="<?php echo $thumb_full; ?>" class="d-block w-100" />
+							<img src="<?php echo $thumb_full; ?>" class="d-block w-100" alt="Bienvenidos a la Sección de Pacientes del Colegio Odontológico de la Provincia de Córdoba. Esta sección está destinada para brindarle información clara y accesible sobre los servicios odontológicos disponibles para la Comunidad en general, con el objetivo de facilitar su acceso a información de calidad y garantizar la protección de sus derechos como pacientes. Aquí encontrará herramientas para consultar profesionales matriculados, servicios especializados, información sobre urgencias odontológicas y opciones para presentar denuncias o reclamos, siempre con el respaldo del Colegio. Queremos acompañarlo en el cuidado de su salud bucal y ayudarlo a resolver sus dudas de manera sencilla y eficiente." />
 						</picture>
 					<?php else: ?>
-						<img src="<?php echo $thumb_full; ?>" class="d-block w-100" />
+						<img src="<?php echo $thumb_full; ?>" class="d-block w-100" alt="Bienvenidos a la Sección de Pacientes del Colegio Odontológico de la Provincia de Córdoba. Esta sección está destinada para brindarle información clara y accesible sobre los servicios odontológicos disponibles para la Comunidad en general, con el objetivo de facilitar su acceso a información de calidad y garantizar la protección de sus derechos como pacientes. Aquí encontrará herramientas para consultar profesionales matriculados, servicios especializados, información sobre urgencias odontológicas y opciones para presentar denuncias o reclamos, siempre con el respaldo del Colegio. Queremos acompañarlo en el cuidado de su salud bucal y ayudarlo a resolver sus dudas de manera sencilla y eficiente." />
 					<?php endif; ?>
 				</div>
 			</div>
