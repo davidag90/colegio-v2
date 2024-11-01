@@ -23,7 +23,7 @@ $thumb_full = get_the_post_thumbnail_url();
 	<div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
 		<div class="row">
 			<div class="col-12">
-				<div id="header-pacientes" class="mb-5 mt-md-5">
+				<div id="header-pacientes" class="my-3 my-lg-5">
 					<?php if ($thumb_mobile): ?>
 						<picture>
 							<source srcset="<?php echo $thumb_mobile; ?>" class="d-block w-100" media="(max-width: 768px)" />
@@ -48,7 +48,7 @@ $thumb_full = get_the_post_thumbnail_url();
 				</main>
 			</div>
 
-			<div class="col-12 col-lg-4 order-1 order-lg-2">
+			<div class="d-none d-lg-block col-lg-4 order-1 order-lg-2">
 				<div class="sticky-lg-top pt-lg-5">
 					<?php dynamic_sidebar('sidebar-pacientes'); ?>
 				</div>
