@@ -8476,6 +8476,13 @@
 	const dropdownMenus = document.querySelectorAll("#main-menu > .dropdown > .dropdown-menu");
 	const lastDropdown = dropdownMenus.length - 1;
 	dropdownMenus[lastDropdown].classList.add("dropdown-menu-end");
+	const modalTipoUsuario = new modal(document.getElementById('tipo-usuario'), {
+	  'backdrop': true,
+	  'keyboard': false
+	});
+	document.addEventListener('DOMContentLoaded', event => {
+	  modalTipoUsuario.show();
+	});
 
 	exports.Alert = alert;
 	exports.Button = button;

@@ -13,6 +13,10 @@ defined('ABSPATH') || exit;
 
 $bootstrap_version = get_theme_mod('understrap_bootstrap_version', 'bootstrap4');
 $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
+
+if ($_GET['tipo_usuario']) {
+	setcookie('tipo_usuario', $_GET['tipo_usuario'], time() + (60 * 60 * 24 * 7 * 4), "/");
+}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -43,29 +47,34 @@ $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 	<?php do_action('wp_body_open'); ?>
 
-	<!-- Modal alert -->
-	<div class="modal fade" id="aviso-aprendiz" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="aviso-aprendiz-titulo" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="aviso-aprendiz-titulo">Registro Aprendiz COPC</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p>Se encuentra cerrada la convocatoria al Registro de Aprendices y Tutores.</p>
-					<p>Próximamente, vamos a comunicar en todos nuestros medios oficiales la reapertura del programa. </p>
-					<p>Muchas gracias.</p>
+	<?php if (!isset($_COOKIE['tipo_usuario'])): ?>
+		<script>
+			function reloadCurrentURL() {
+				let url = new URL(window.location.href);
+
+				url.searchParams.append('tipo_usuario', 'profesional');
+
+				location.replace(url);
+			}
+		</script>
+		<div class="modal fade" id="tipo-usuario" tabindex="-1" role="dialog" aria-labelledby="tipo-usuario-titulo" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="tipo-usuario-titulo">Bienvenido al sitio web del COPC</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Por favor seleccione la sección que desea visitar:</p>
+						<div class="d-flex flex-row justify-content-start">
+							<a href="<?php echo esc_url(home_url() . '/pacientes?tipo_usuario=paciente') ?>" class="btn btn-danger me-2">Sección Pacientes</a>
+							<button type="button" onclick="reloadCurrentURL()" class="btn btn-primary">Sección Profesionales</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<script>
-		const myModal = new bootstrap.Modal(
-			document.getElementById("aviso-aprendiz"),
-			options,
-		);
-	</script>
+	<?php endif; ?>
 
 	<div class="site d-flex flex-column min-vh-100" id="page">
 
