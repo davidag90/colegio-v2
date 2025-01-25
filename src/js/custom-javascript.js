@@ -1,5 +1,6 @@
 /* Gets Splide library to generate a carousel on the homepage */
 import Splide from "./assets/splide/js/splide.min.js";
+import * as bootstrap from "./bootstrap.js";
 
 new Splide(".splide", {
   perPage: 4,
@@ -34,3 +35,13 @@ const dropdownMenus = document.querySelectorAll("#main-menu > .dropdown > .dropd
 const lastDropdown = dropdownMenus.length - 1;
 
 dropdownMenus[lastDropdown].classList.add("dropdown-menu-end");
+
+
+const modalTipoUsuario = new bootstrap.Modal(document.getElementById('tipo-usuario'), {
+  'backdrop' : true,
+  'keyboard' : false
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  modalTipoUsuario.show();
+})

@@ -1,5 +1,5 @@
 module.exports = {
-    "proxy": "colodontcba.test", // Change here
+    "proxy": "colodontcba.localhost", // Change here
     "notify": false,
     "files": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"]
 };
