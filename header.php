@@ -47,7 +47,7 @@ if ($_GET['tipo_usuario']) {
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 	<?php do_action('wp_body_open'); ?>
 
-	<?php if (!isset($_COOKIE['tipo_usuario'])): ?>
+	<?php if (!isset($_COOKIE['tipo_usuario']) && !$_GET['tipo_usuario']): ?>
 		<script>
 			function reloadCurrentURL() {
 				let url = new URL(window.location.href);
@@ -57,6 +57,7 @@ if ($_GET['tipo_usuario']) {
 				location.replace(url);
 			}
 		</script>
+
 		<div class="modal fade" id="tipo-usuario" tabindex="-1" role="dialog" aria-labelledby="tipo-usuario-titulo" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
 				<div class="modal-content">
