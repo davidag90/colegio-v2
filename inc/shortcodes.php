@@ -309,7 +309,7 @@ add_shortcode('lista-protocolos', 'mostrar_protocolos');
 
 
 
-if (! function_exists('mostar_historia_consent')) {
+if (! function_exists('mostrar_historia_consent')) {
     function mostar_historia_consent()
     {
         ob_start();
