@@ -28,6 +28,16 @@ $container = get_theme_mod('understrap_container_type');
     </div>
 
     <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : ?>
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <?php the_post(); ?>
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
         <div class="row">
             <div class="col-12">
                 <p>Utilizá el menú lateral izquierdo para visualizar los convenios de cada rubro y encontrar más fácilmente lo que buscás</p>
