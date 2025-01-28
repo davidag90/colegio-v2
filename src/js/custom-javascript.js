@@ -36,16 +36,17 @@ const lastDropdown = dropdownMenus.length - 1;
 
 dropdownMenus[lastDropdown].classList.add("dropdown-menu-end");
 
-
-const modalTipoUsuario = new Modal(document.getElementById('tipo-usuario'), {
-  'backdrop' : true,
-  'keyboard' : false
-});
-
 window.addEventListener('load', (event) => {
   const docCookies = document.cookie;
   const docHref = document.location.href;
   const searchCookie = 'tipo_usuario';
 
-  if(!docCookies.includes(searchCookie) && !docHref.includes(searchCookie)) modalTipoUsuario.show();  
+  if(!docCookies.includes(searchCookie) && !docHref.includes(searchCookie)) {
+    const modalTipoUsuario = new Modal(document.getElementById('tipo-usuario'), {
+      'backdrop' : true,
+      'keyboard' : false
+    });
+    
+    modalTipoUsuario.show();
+  }
 })
