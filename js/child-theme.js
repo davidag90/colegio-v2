@@ -8481,7 +8481,10 @@
 	  'keyboard': false
 	});
 	window.addEventListener('load', event => {
-	  modalTipoUsuario.show();
+	  const docCookies = document.cookie;
+	  const docHref = document.location.href;
+	  const searchCookie = 'tipo_usuario';
+	  if (!docCookies.includes(searchCookie) && !docHref.includes(searchCookie)) modalTipoUsuario.show();
 	});
 
 	exports.Alert = alert;
