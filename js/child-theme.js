@@ -4077,7 +4077,7 @@
 
 	var dropdown = /*@__PURE__*/getDefaultExportFromCjs(dropdown$1.exports);
 
-	var modal$1 = {exports: {}};
+	var modal = {exports: {}};
 
 	var scrollbar = {exports: {}};
 
@@ -4791,9 +4791,9 @@
 		  index.defineJQueryPlugin(Modal);
 		  return Modal;
 		});
-	} (modal$1));
+	} (modal));
 
-	var modal = modal$1.exports;
+	var Modal = modal.exports;
 
 	var offcanvas$1 = {exports: {}};
 
@@ -8476,11 +8476,11 @@
 	const dropdownMenus = document.querySelectorAll("#main-menu > .dropdown > .dropdown-menu");
 	const lastDropdown = dropdownMenus.length - 1;
 	dropdownMenus[lastDropdown].classList.add("dropdown-menu-end");
-	const modalTipoUsuario = new modal(document.getElementById('tipo-usuario'), {
+	const modalTipoUsuario = new Modal(document.getElementById('tipo-usuario'), {
 	  'backdrop': true,
 	  'keyboard': false
 	});
-	document.addEventListener('DOMContentLoaded', event => {
+	window.addEventListener('load', event => {
 	  modalTipoUsuario.show();
 	});
 
@@ -8489,7 +8489,7 @@
 	exports.Carousel = carousel;
 	exports.Collapse = collapse;
 	exports.Dropdown = dropdown;
-	exports.Modal = modal;
+	exports.Modal = Modal;
 	exports.Offcanvas = offcanvas;
 	exports.Popover = popover;
 	exports.Scrollspy = scrollspy;
