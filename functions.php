@@ -14,7 +14,8 @@ defined('ABSPATH') || exit;
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
  */
-function understrap_remove_scripts() {
+function understrap_remove_scripts()
+{
 	wp_dequeue_style('understrap-styles');
 	wp_deregister_style('understrap-styles');
 
@@ -28,7 +29,8 @@ add_action('wp_enqueue_scripts', 'understrap_remove_scripts', 20);
 /**
  * Enqueue our stylesheet and javascript file
  */
-function theme_enqueue_styles() {
+function theme_enqueue_styles()
+{
 
 	// Get the theme data.
 	$the_theme     = wp_get_theme();
@@ -56,7 +58,7 @@ function theme_enqueue_styles() {
 	wp_enqueue_style('splide-css', get_stylesheet_directory_uri() . '/src/js/assets/splide/css/splide.min.css', array());
 
 	if (is_page('delegados-departamentales')) {
-		wp_enqueue_script('departamentos', get_stylesheet_directory_uri() . '/js/departamentos.js', array(), null, true);
+		wp_enqueue_script('departamentos', get_stylesheet_directory_uri() . '/src/js/departamentos.js', array(), null, true);
 	}
 
 	if (is_page('bolsa-trabajo')) {
@@ -73,7 +75,8 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 /**
  * Load the child theme's text domain
  */
-function add_child_theme_textdomain() {
+function add_child_theme_textdomain()
+{
 	load_child_theme_textdomain('understrap-child', get_stylesheet_directory() . '/languages');
 }
 add_action('after_setup_theme', 'add_child_theme_textdomain');
@@ -87,7 +90,8 @@ add_action('after_setup_theme', 'add_child_theme_textdomain');
  *
  * @return string
  */
-function understrap_default_bootstrap_version() {
+function understrap_default_bootstrap_version()
+{
 	return 'bootstrap5';
 }
 add_filter('theme_mod_understrap_bootstrap_version', 'understrap_default_bootstrap_version', 20);
@@ -96,7 +100,8 @@ add_filter('theme_mod_understrap_bootstrap_version', 'understrap_default_bootstr
 /**
  * Loads javascript for showing customizer warning dialog.
  */
-function understrap_child_customize_controls_js() {
+function understrap_child_customize_controls_js()
+{
 	wp_enqueue_script(
 		'understrap_child_customizer',
 		get_stylesheet_directory_uri() . '/js/customizer-controls.js',
