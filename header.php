@@ -14,10 +14,11 @@ defined('ABSPATH') || exit;
 $bootstrap_version = get_theme_mod('understrap_bootstrap_version', 'bootstrap4');
 $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
 
-if ($_GET['tipo_usuario']) {
-	setcookie('tipo_usuario', $_GET['tipo_usuario'], time() + (60 * 60 * 24 * 7 * 4), "/");
-}
+// Checks for "tipo_usuario" query param and set cookie based on its value
+if ($_GET['tipo_usuario']) setcookie('tipo_usuario', $_GET['tipo_usuario'], time() + (60 * 60 * 24 * 7 * 52), "/");
+
 ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -47,7 +48,7 @@ if ($_GET['tipo_usuario']) {
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 	<?php do_action('wp_body_open'); ?>
 
-	<?php if (!isset($_COOKIE['tipo_usuario']) && !$_GET['tipo_usuario']): ?>
+	<?php if (!isset($_COOKIE['tipo_usuario']) && !isset($_GET['tipo_usuario'])): ?>
 		<script>
 			function reloadCurrentURL() {
 				let url = new URL(window.location.href);
