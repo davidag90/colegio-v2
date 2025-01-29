@@ -2,22 +2,26 @@
 import Splide from "@splidejs/splide";
 import { Modal } from "./bootstrap.js";
 
-new Splide(".splide", {
-  perPage: 4,
-  // Responsive breakpoints
-  breakpoints: {
-    1200: {
-      perPage: 3,
+const splideCheck = document.querySelector('.splide');
+
+if(splideCheck) {
+  new Splide(".splide", {
+    perPage: 4,
+    // Responsive breakpoints
+    breakpoints: {
+      1200: {
+        perPage: 3,
+      },
+      992: {
+        perPage: 2,
+      },
+      576: {
+        perPage: 1,
+      },
     },
-    992: {
-      perPage: 2,
-    },
-    576: {
-      perPage: 1,
-    },
-  },
-  gap: "2rem",
-}).mount();
+    gap: "2rem",
+  }).mount();
+}
 
 // Custom look for "list-group" items in "Resoluciones FACO" page
 let listElems = document.querySelectorAll("#lista-resoluciones > li");
