@@ -45,7 +45,7 @@ if ($_GET['tipo_usuario']) setcookie('tipo_usuario', $_GET['tipo_usuario'], time
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
+<body <?php body_class($post->post_name); ?> <?php understrap_body_attributes(); ?>>
 	<?php do_action('wp_body_open'); ?>
 
 	<?php if (!isset($_COOKIE['tipo_usuario']) && !isset($_GET['tipo_usuario'])): ?>
