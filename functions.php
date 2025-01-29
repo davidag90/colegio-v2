@@ -54,8 +54,7 @@ function theme_enqueue_styles()
 		wp_enqueue_script('comment-reply');
 	}
 
-	wp_enqueue_script('splide-js', get_stylesheet_directory_uri() . '/src/js/assets/splide/js/splide.min.js', array(), '', true);
-	wp_enqueue_style('splide-css', get_stylesheet_directory_uri() . '/src/js/assets/splide/css/splide.min.css', array());
+	wp_enqueue_style('splide-css', get_stylesheet_directory_uri() . '/css/splide.min.css', array());
 
 	if (is_page('delegados-departamentales')) {
 		wp_enqueue_script('departamentos', get_stylesheet_directory_uri() . '/src/js/departamentos.js', array(), null, true);

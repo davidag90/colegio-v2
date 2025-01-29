@@ -1,5 +1,5 @@
 /* Gets Splide library to generate a carousel on the homepage */
-import Splide from "./assets/splide/js/splide.min.js";
+import Splide from "@splidejs/splide";
 import { Modal } from "./bootstrap.js";
 
 new Splide(".splide", {
@@ -36,17 +36,25 @@ const lastDropdown = dropdownMenus.length - 1;
 
 dropdownMenus[lastDropdown].classList.add("dropdown-menu-end");
 
+
 window.addEventListener('load', (event) => {
   const docCookies = document.cookie;
   const docHref = document.location.href;
   const searchCookie = 'tipo_usuario';
+
+  console.log(docCookies);
+  console.log(docHref);
+  console.log(searchCookie);
 
   if(!docCookies.includes(searchCookie) && !docHref.includes(searchCookie)) {
     const modalTipoUsuario = new Modal(document.getElementById('tipo-usuario'), {
       'backdrop' : true,
       'keyboard' : false
     });
-    
+
+    console.log(modalTipoUsuario);
     modalTipoUsuario.show();
   }
 })
+
+console.log('test');
