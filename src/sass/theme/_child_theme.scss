@@ -1,52 +1,68 @@
 // Fonts
 /* oswald-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/oswald-v53-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/oswald-v53-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* oswald-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Oswald";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/oswald-v53-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/oswald-v53-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* arimo-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Arimo";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/arimo-v29-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/arimo-v29-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* arimo-italic - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Arimo";
   font-style: italic;
   font-weight: 400;
-  src: url("../fonts/arimo-v29-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/arimo-v29-latin-italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* arimo-700 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Arimo";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/arimo-v29-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/arimo-v29-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
 /* arimo-700italic - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Arimo";
   font-style: italic;
   font-weight: 700;
-  src: url("../fonts/arimo-v29-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/arimo-v29-latin-700italic.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 // Global
@@ -87,21 +103,21 @@
   }
 }
 
-#main-menu > .menu-item > a {
+#main-menu>.menu-item>a {
   text-transform: uppercase;
 }
 
-#main-menu > .menu-item > a:link,
-#main-menu > .menu-item > a:visited {
+#main-menu>.menu-item>a:link,
+#main-menu>.menu-item>a:visited {
   color: white;
 }
 
-#main-menu > .menu-item > a:hover,
-#main-menu > .menu-item > a:active {
+#main-menu>.menu-item>a:hover,
+#main-menu>.menu-item>a:active {
   text-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
 }
 
-#main-menu > .menu-item.link-pacientes > a  {
+#main-menu>.menu-item.link-pacientes>a {
   background-color: #c14f95;
   border-radius: $border-radius;
 }
@@ -110,10 +126,11 @@
   max-width: 15rem;
 }
 
-#front-searchbox > .form-control::placeholder {
+#front-searchbox>.form-control::placeholder {
   color: white;
   opacity: 0.5;
 }
+
 // ---------------
 
 // Front-page
@@ -124,7 +141,7 @@
   flex-wrap: wrap;
 }
 
-#accesos-rapidos > a {
+#accesos-rapidos>a {
   aspect-ratio: 1/1;
   box-shadow: 0px 2px 2px rgba(25, 50, 100, 0.4);
   text-decoration: none !important;
@@ -134,18 +151,18 @@
   opacity: 0.85;
 }
 
-#accesos-rapidos > a > span > i {
+#accesos-rapidos>a>span>i {
   font-size: 2.5em;
 }
 
-#accesos-rapidos > a:hover {
+#accesos-rapidos>a:hover {
   box-shadow: 0 2px 8px rgba(25, 50, 100, 0.85);
   transition: box-shadow 0.3s;
   transition: opacity 0.3s;
   opacity: 1;
 }
 
-#accesos-rapidos > a > .link-text {
+#accesos-rapidos>a>.link-text {
   font-size: 0.9rem;
 }
 
@@ -154,15 +171,15 @@
     gap: 1.25rem;
   }
 
-  #accesos-rapidos > a {
+  #accesos-rapidos>a {
     width: 130px;
   }
 
-  #accesos-rapidos > a > span > i {
+  #accesos-rapidos>a>span>i {
     font-size: 3.25em;
   }
-  
-  #accesos-rapidos > a > .link-text {
+
+  #accesos-rapidos>a>.link-text {
     font-size: 1.2rem;
   }
 }
@@ -186,13 +203,14 @@
   margin-bottom: 0.25rem;
 }
 
-#front-novedades .front-novedad .card-body .card-title > a:link,
-#front-novedades .front-novedad .card-body .card-title > a:visited {
+#front-novedades .front-novedad .card-body .card-title>a:link,
+#front-novedades .front-novedad .card-body .card-title>a:visited {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
-#front-novedades .front-novedad .card-body .card-title > a:hover,
-#front-novedades .front-novedad .card-body .card-title > a:active {
+
+#front-novedades .front-novedad .card-body .card-title>a:hover,
+#front-novedades .front-novedad .card-body .card-title>a:active {
   text-decoration: underline;
   text-underline-offset: 0.25rem;
   color: rgba(255, 255, 255, 1);
@@ -220,20 +238,20 @@
   margin-bottom: -2.5rem;
 }
 
-.tramites-accesos > ul {
+.tramites-accesos>ul {
   list-style-type: none;
   padding-left: 0;
   column-gap: 2rem;
   column-count: 1;
 }
 
-.tramites-accesos > ul > li {
+.tramites-accesos>ul>li {
   line-height: 2.25rem;
   text-decoration: underline;
   text-underline-offset: 0.2rem;
 }
 
-.tramites-accesos > ul > li::before {
+.tramites-accesos>ul>li::before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -244,7 +262,7 @@
 }
 
 @include media-breakpoint-up(sm) {
-  .tramites-accesos > ul {
+  .tramites-accesos>ul {
     column-count: 2;
   }
 }
@@ -257,10 +275,11 @@
 }
 
 @include media-breakpoint-up(xl) {
-  .tramites-accesos > ul {
+  .tramites-accesos>ul {
     column-count: 3;
   }
 }
+
 // ---------------
 
 // Single
@@ -286,19 +305,20 @@
   padding: 0;
 }
 
-.footer-menu > li {
+.footer-menu>li {
   margin-bottom: 1rem;
 }
 
-.footer-menu > li > a:link,
-.footer-menu > li > a:visited {
+.footer-menu>li>a:link,
+.footer-menu>li>a:visited {
   color: white;
 }
 
-.footer-menu > li > a:hover,
-.footer-menu > li > a:active {
+.footer-menu>li>a:hover,
+.footer-menu>li>a:active {
   color: rgba(255, 255, 255, 0.5);
 }
+
 // ---------------
 
 // Utils
@@ -323,6 +343,7 @@
   height: 100%;
   object-fit: cover;
 }
+
 // ---------------
 
 // Widgets
@@ -349,20 +370,20 @@
   font-size: 1em;
 }
 
-.widget_recent_entries > ul,
+.widget_recent_entries>ul,
 .widget_nav_menu .menu {
   padding-left: 0;
   margin-left: 0;
   list-style: none;
 }
 
-.widget_recent_entries > ul > li,
-.widget_nav_menu .menu > li {
+.widget_recent_entries>ul>li,
+.widget_nav_menu .menu>li {
   margin-bottom: 0.75rem;
   line-height: 1.5;
 }
 
-.widget_recent_entries > ul > li > a::before {
+.widget_recent_entries>ul>li>a::before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -383,7 +404,7 @@
   font-size: 1em;
 }
 
-.widget_nav_menu .menu > li > a::before {
+.widget_nav_menu .menu>li>a::before {
   display: inline-block;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -401,12 +422,12 @@
   background-color: rgba(200, 225, 250, 0.25);
 }
 
-.miembro-autoridades > .desc-autoridad > ul {
+.miembro-autoridades>.desc-autoridad>ul {
   list-style: none;
   padding-left: 0;
 }
 
-.miembro-autoridades > .desc-autoridad > ul > li {
+.miembro-autoridades>.desc-autoridad>ul>li {
   margin-bottom: 1rem;
 }
 
@@ -435,7 +456,7 @@
   }
 }
 
-#resumen-boletines > .boletin {
+#resumen-boletines>.boletin {
   opacity: 0.8;
   box-shadow: 0;
   transition: opacity 0.25s;
@@ -443,7 +464,7 @@
   height: 100%;
 }
 
-#resumen-boletines > .boletin:hover {
+#resumen-boletines>.boletin:hover {
   opacity: 1;
   box-shadow: 1px 1px 3px rgba(25, 50, 100, 0.5);
   transition: opacity 0.25s;
@@ -451,10 +472,11 @@
 }
 
 // Convenios
-#lista-rubros > .list-group-item {
+#lista-rubros>.list-group-item {
   font-size: 1rem;
 }
-.convenio > .card > .card-header {
+
+.convenio>.card>.card-header {
   font-size: 0.8rem;
 }
 
@@ -467,6 +489,7 @@
 }
 
 @include media-breakpoint-up(lg) {
+
   #comisiones-trabajo,
   #tramites-online {
     grid-template-columns: 1fr 1fr;
@@ -474,6 +497,7 @@
 }
 
 @include media-breakpoint-up(xxl) {
+
   #comisiones-trabajo,
   #tramites-online {
     grid-template-columns: 1fr 1fr 1fr;
@@ -484,16 +508,17 @@
 .content-departamento {
   transition: all 0.25s ease;
 }
-.svg-map-wrapper > svg {
+
+.svg-map-wrapper>svg {
   max-width: 420px;
   height: auto;
 }
 
-.svg-map-wrapper > svg path:hover {
+.svg-map-wrapper>svg path:hover {
   cursor: pointer;
 }
 
-.svg-map-wrapper > svg path.not-selected {
+.svg-map-wrapper>svg path.not-selected {
   fill: rgba(73, 160, 201, 0.2);
   stroke: rgba(15, 32, 40, 0.25);
   stroke-width: 0.5;
@@ -518,40 +543,41 @@ path.forbidden {
 }
 
 @include media-breakpoint-up(md) {
+
   #resumen-revistas,
   #resumen-aranceles {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-#resumen-revistas > .revista,
-#resumen-aranceles > .arancel {
+#resumen-revistas>.revista,
+#resumen-aranceles>.arancel {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
 }
 
-#resumen-revistas > .revista > .thumb-revista,
-#resumen-aranceles > .arancel > .thumb-arancel {
+#resumen-revistas>.revista>.thumb-revista,
+#resumen-aranceles>.arancel>.thumb-arancel {
   background-color: lightgray;
   min-width: 100px;
   max-width: 120px;
   width: 100%;
 }
 
-#resumen-revistas > .revista > .thumb-revista > img,
-#resumen-aranceles > .arancel > .thumb-arancel > img {
+#resumen-revistas>.revista>.thumb-revista>img,
+#resumen-aranceles>.arancel>.thumb-arancel>img {
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
-#resumen-revistas > .revista > .desc-revista,
-#resumen-aranceles > .arancel > .desc-arancel {
+#resumen-revistas>.revista>.desc-revista,
+#resumen-aranceles>.arancel>.desc-arancel {
   flex-grow: 1;
   text-align: left;
 }
 
 // Valor Min Consulta
-.ultimo-folleto > div > img {
+.ultimo-folleto>div>img {
   object-fit: cover;
   aspect-ratio: 16/9;
 }
@@ -584,7 +610,7 @@ path.forbidden {
   gap: 1.5rem;
 }
 
-#links-interes > .card > .card-body {
+#links-interes>.card>.card-body {
   display: flex;
   flex-direction: column;
 }
@@ -615,4 +641,9 @@ path.forbidden {
 
 .post-navigation {
   clear: both;
+}
+
+#modal-encuesta iframe {
+  width: 100%;
+  height: 60dvh;
 }
