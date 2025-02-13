@@ -32,6 +32,11 @@ $container = get_theme_mod('understrap_container_type');
 
     <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
         <div class="row">
+            <div class="col-12">
+                <?php the_content(); ?>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12 col-xl-9">
                 <div id="profesionales">
                     <div class="d-flex justify-content-start align-items-center">
@@ -44,6 +49,16 @@ $container = get_theme_mod('understrap_container_type');
             <div class="col-12 col-xl-3">
 
             </div><!-- .col -->
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-12 col-xl-9">
+                <div class="alert my-4 alert-primary" role="alert">
+                    <h3>Servicio Odontológico de Urgencias 24 hrs</h3>
+                    <p><i class="fas fa-location-dot"></i> <em>Avenida Colón 4789</em></p>
+                    <p><strong>Los 365 días del año durante las 24 horas del día</strong></p>
+                </div><!-- .alert -->
+            </div><!-- .col-12.col-xl-9 -->
         </div><!-- .row -->
     </div><!-- #content -->
 </div><!-- .wrapper -->
