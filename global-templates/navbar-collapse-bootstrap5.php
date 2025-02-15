@@ -26,7 +26,7 @@ defined('ABSPATH') || exit;
 
 		<div class="d-block d-xl-none break">&nbsp;</div>
 
-		<div class="d-xl-flex flex-column align-items-end">
+		<div class="d-xl-flex flex-column align-items-end w-100">
 			<!-- Search form -->
 			<?php get_search_form(); ?>
 
@@ -36,7 +36,7 @@ defined('ABSPATH') || exit;
 					'theme_location'  => 'primary',
 					'container_class' => 'collapse navbar-collapse',
 					'container_id'    => 'navbarNavDropdown',
-					'menu_class'      => 'navbar-nav ms-auto',
+					'menu_class'      => 'navbar-nav ms-auto mt-2 mt-xl-0',
 					'fallback_cb'     => '',
 					'menu_id'         => 'main-menu',
 					'depth'           => 2,
