@@ -15081,15 +15081,21 @@ figure.woocommerce-product-gallery__wrapper {
   border-radius: 0.375rem;
 }
 
-#front-searchbox {
-  max-width: 15rem;
+@media (max-width: 1199.98px) {
+  #main-menu > .menu-item.link-pacientes > a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
-
+@media (min-width: 1200px) {
+  #front-searchbox {
+    max-width: 15rem;
+  }
+}
 #front-searchbox > .form-control::-moz-placeholder, .wpcf7 #front-searchbox > .wpcf7-validation-errors::-moz-placeholder, .wpcf7 #front-searchbox > input[type=text]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=search]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=url]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=tel]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=number]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=range]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=date]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=month]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=week]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=time]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=datetime]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=datetime-local]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=color]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=email]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=file]::-moz-placeholder, .wpcf7 #front-searchbox > input[type=submit]::-moz-placeholder, .wpcf7 #front-searchbox > select::-moz-placeholder, .wpcf7 #front-searchbox > textarea::-moz-placeholder {
   color: white;
   opacity: 0.5;
 }
-
 #front-searchbox > .form-control::placeholder, .wpcf7 #front-searchbox > .wpcf7-validation-errors::placeholder, .wpcf7 #front-searchbox > input[type=text]::placeholder,
 .wpcf7 #front-searchbox > input[type=search]::placeholder,
 .wpcf7 #front-searchbox > input[type=url]::placeholder,

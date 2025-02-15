@@ -122,8 +122,18 @@
   border-radius: $border-radius;
 }
 
-#front-searchbox {
-  max-width: 15rem;
+
+@include media-breakpoint-down(xl) {
+  #main-menu>.menu-item.link-pacientes>a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  #front-searchbox {
+    max-width: 15rem;
+  }
 }
 
 #front-searchbox>.form-control::placeholder {
