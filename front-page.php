@@ -113,7 +113,7 @@ $container = get_theme_mod('understrap_container_type');
 								<span class="d-block link-text">Bolsa</span>
 							</a>
 
-							<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light" data-bs-toggle="modal" data-bs-target="#aviso-aprendiz">
+							<a href="https://colodontcba.org.ar/informacion-general/aranceles/" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light">
 								<span class="d-block mb-2"><i class="fa-solid fa-file-invoice-dollar fa-2x fa-fw"></i></span>
 								<span class="d-block link-text">Aranceles</span>
 							</a>
