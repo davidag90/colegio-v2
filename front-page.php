@@ -114,8 +114,8 @@ $container = get_theme_mod('understrap_container_type');
 							</a>
 
 							<a href="#" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light" data-bs-toggle="modal" data-bs-target="#aviso-aprendiz">
-								<span class="d-block mb-2"><i class="fa-solid fa-book fa-2x fa-fw"></i></span>
-								<span class="d-block link-text">Aprendiz</span>
+								<span class="d-block mb-2"><i class="fa-solid fa-file-invoice-dollar fa-2x fa-fw"></i></span>
+								<span class="d-block link-text">Aranceles</span>
 							</a>
 						</nav>
 					</div>
