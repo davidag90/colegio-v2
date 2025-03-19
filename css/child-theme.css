@@ -15126,28 +15126,28 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 #accesos-rapidos > a {
+  width: 100px;
+}
+
+#accesos-rapidos > a > .acceso-icon > span {
+  font-size: 3rem;
+}
+
+#accesos-rapidos > a > .acceso-icon {
   aspect-ratio: 1/1;
   box-shadow: 0px 2px 2px rgba(25, 50, 100, 0.4);
   text-decoration: none !important;
   transition: box-shadow 0.3s;
   transition: opacity 0.3s;
-  width: 100px;
   opacity: 0.85;
+  width: 100%;
 }
 
-#accesos-rapidos > a > span > i {
-  font-size: 2.5em;
-}
-
-#accesos-rapidos > a:hover {
+#accesos-rapidos > a:hover > .acceso-icon {
   box-shadow: 0 2px 8px rgba(25, 50, 100, 0.85);
   transition: box-shadow 0.3s;
   transition: opacity 0.3s;
   opacity: 1;
-}
-
-#accesos-rapidos > a > .link-text {
-  font-size: 0.9rem;
 }
 
 @media (min-width: 1400px) {
@@ -15157,10 +15157,10 @@ figure.woocommerce-product-gallery__wrapper {
   #accesos-rapidos > a {
     width: 130px;
   }
-  #accesos-rapidos > a > span > i {
-    font-size: 3.25em;
+  #accesos-rapidos > a > .acceso-icon > span {
+    font-size: 4rem;
   }
-  #accesos-rapidos > a > .link-text {
+  #accesos-rapidos > a .link-text {
     font-size: 1.2rem;
   }
 }

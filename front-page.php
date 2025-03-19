@@ -67,56 +67,81 @@ $container = get_theme_mod('understrap_container_type');
 					<div class="col">
 						<h2 class="d-none">Accesos Rápidos</h2>
 						<nav id="accesos-rapidos" class="width-100 p-4 bg-light bg-gradient border-top border-bottom border-dark-subtle border-5">
-							<a href="https://www.indexweb.com.ar/colegio/loginservicios.aspx" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-danger bg-gradient link-light">
-								<span class="d-block mb-2"><i class="fa-solid fa-circle-user fa-2x fa-fw"></i></span>
+							<a href="https://colodontcba.org.ar/elecciones-2025/" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<div class="acceso-icon rounded-4 p-1 bg-success bg-gradient d-flex align-items-center justify-content-center mb-2">
+									<span class="d-block text-light"><i class="fa-solid fa-square-poll-vertical fa-fw"></i></span>
+								</div>
+								<span class="d-block link-text">Elecciones 2025</span>
+							</a>
+
+							<a href="https://www.indexweb.com.ar/colegio/loginservicios.aspx" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<div class="acceso-icon rounded-4 p-1 bg-danger bg-gradient d-flex align-items-center justify-content-center mb-2">
+									<span class="d-block text-light"><i class="fa-solid fa-circle-user fa-fw"></i></span>
+								</div>
 								<span class="d-block link-text">Mi cuenta</span>
 							</a>
 
-							<a href="https://www.indexweb.com.ar/capac/grilla.aspx" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light">
-								<span class="d-block mb-2"><i class="fa-solid fa-graduation-cap fa-2x fa-fw"></i></span>
+							<a href="https://www.indexweb.com.ar/capac/grilla.aspx" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<div class="acceso-icon rounded-4 p-1 bg-primary bg-gradient d-flex align-items-center justify-content-center mb-2">
+									<span class="d-block text-light"><i class="fa-solid fa-graduation-cap fa-fw"></i></span>
+								</div>
 								<span class="d-block link-text">Formación</span>
-							</a>
-
-							<a href="<?php echo site_url(); ?>/colegio/comisiones-trabajo/" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light">
-								<span class="d-block mb-2"><i class="fa-solid fa-people-group fa-2x fa-fw"></i></span>
-								<span class="d-block link-text">Comisiones</span>
 							</a>
 
 							<div class="d-block d-md-none break">&nbsp;</div>
 
-							<a href="<?php echo site_url(); ?>/informacion-general/convenios-beneficios/" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light">
-								<span class="d-block mb-2"><i class="fa-solid fa-handshake fa-2x fa-fw"></i></span>
-								<span class="d-block link-text">Beneficios</span>
+							<a href="<?php echo site_url(); ?>/colegio/comisiones-trabajo/" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<div class="acceso-icon rounded-4 p-1 bg-primary bg-gradient d-flex align-items-center justify-content-center mb-2">
+									<span class="d-block text-light"><i class="fa-solid fa-people-group fa-fw"></i></span>
+								</div>
+								<span class="d-block link-text">Comisiones</span>
 							</a>
 
-							<a href="<?php echo site_url(); ?>/colegio/comisiones-trabajo/comision-fondo-ayuda-solidario/" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light">
-								<span class="d-block mb-2"><i class="fa-solid fa-life-saver fa-2x fa-fw"></i></span>
-								<span class="d-block link-text">Subsidios</span>
+							<a href="<?php echo site_url(); ?>/informacion-general/convenios-beneficios/" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<div class="acceso-icon rounded-4 p-1 bg-primary bg-gradient d-flex align-items-center justify-content-center mb-2">
+									<span class="d-block text-light"><i class="fa-solid fa-handshake fa-fw"></i></span>
+								</div>
+								<span class="d-block link-text">Beneficios</span>
 							</a>
 
 							<div class="d-none d-md-block d-xl-none break">&nbsp;</div>
 
-							<a href="https://www.indexweb.com.ar/colegio/matriculados.aspx?Estado=1" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light">
-								<span class="d-block mb-2"><i class="fa-solid fa-file-text fa-2x fa-fw"></i></span>
-								<span class="d-block link-text">Matriculados</span>
+							<a href="<?php echo site_url(); ?>/colegio/comisiones-trabajo/comision-fondo-ayuda-solidario/" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<div class="acceso-icon rounded-4 p-1 bg-primary bg-gradient d-flex align-items-center justify-content-center mb-2">
+									<span class="d-block text-light"><i class="fa-solid fa-life-saver fa-fw"></i></span>
+								</div>
+								<span class="d-block link-text">Subsidios</span>
 							</a>
 
 							<div class="d-block d-md-none break">&nbsp;</div>
 
-							<a href="https://www.indexweb.com.ar/colegio/loginservicios.aspx" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light">
-								<span class="d-block mb-2"><i class="fa-solid fa-kit-medical fa-2x fa-fw"></i></span>
+							<a href="https://www.indexweb.com.ar/colegio/matriculados.aspx?Estado=1" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<div class="acceso-icon rounded-4 p-1 bg-primary bg-gradient d-flex align-items-center justify-content-center mb-2">
+									<span class="d-block text-light"><i class="fa-solid fa-file-text fa-fw"></i></span>
+								</div>
+								<span class="d-block link-text">Matriculados</span>
+							</a>
+
+							<a href="https://www.indexweb.com.ar/colegio/loginservicios.aspx" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<div class="acceso-icon rounded-4 p-1 bg-primary bg-gradient d-flex align-items-center justify-content-center mb-2">
+									<span class="d-block text-light"><i class="fa-solid fa-kit-medical fa-fw"></i></span>
+								</div>
 								<span class="d-block link-text">Urgencias</span>
 							</a>
 
-							<a href="https://www.indexweb.com.ar/matriculas/bolsa.aspx" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light">
-								<span class="d-block mb-2"><i class="fa-solid fa-briefcase fa-2x fa-fw"></i></span>
+							<a href="https://www.indexweb.com.ar/matriculas/bolsa.aspx" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<div class="acceso-icon rounded-4 p-1 bg-primary bg-gradient d-flex align-items-center justify-content-center mb-2">
+									<span class="d-block text-light"><i class="fa-solid fa-briefcase fa-fw"></i></span>
+								</div>
 								<span class="d-block link-text">Bolsa</span>
 							</a>
 
-							<a href="https://colodontcba.org.ar/informacion-general/aranceles/" class="d-flex align-items-center justify-content-center flex-column text-center rounded-4 p-1 bg-primary bg-gradient link-light">
-								<span class="d-block mb-2"><i class="fa-solid fa-file-invoice-dollar fa-2x fa-fw"></i></span>
+							<!--
+							<a href="https://colodontcba.org.ar/informacion-general/aranceles/" class="d-flex align-items-center justify-content-start flex-column text-center">
+								<span class="d-block text-light mb-2"><i class="fa-solid fa-file-invoice-dollar fa-fw"></i></span>
 								<span class="d-block link-text">Aranceles</span>
 							</a>
+							-->
 						</nav>
 					</div>
 				</div>
